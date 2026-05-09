@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PandaTour Gestão 2026</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f8f9fa;color:#1a1a1a;font-size:14px}
+:root{--green:#1D9E75;--green2:#0F6E56;--green-bg:#E1F5EE;--red:#E24B4A;--amber:#EF9F27;--blue:#4285F4;--border:#e0e0e0;--bg:#fff;--bg2:#f8f9fa}
+.topbar{background:#fff;border-bottom:1px solid var(--border);padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;position:sticky;top:0;z-index:10}
+.logo{font-size:18px;font-weight:600;color:var(--green2)}
+.logo span{color:var(--green)}
+.tabs{display:flex;gap:2px;background:#f0f0f0;border-radius:8px;padding:3px}
+.tab{padding:5px 14px;border-radius:6px;font-size:13px;cursor:pointer;border:none;background:transparent;color:#666;transition:all .15s}
+.tab.active{background:#fff;color:#1a1a1a;font-weight:500;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.user-bar{display:flex;align-items:center;gap:8px;font-size:13px;color:#666}
+.avatar{width:28px;height:28px;border-radius:50%;border:2px solid var(--green)}
+.main{padding:20px;max-width:1200px;margin:0 auto}
+.panel{display:none}.panel.active{display:block}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:1.5rem}
+.card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center}
+.card-label{font-size:11px;color:#999;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px}
+.card-value{font-size:22px;font-weight:600}
+.green{color:var(--green2)}.red{color:var(--red)}.amber{color:#854F0B}
+.section-title{font-size:15px;font-weight:600;margin:1.5rem 0 .75rem;color:#1a1a1a}
+.form-wrap{background:#fff;border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:1.5rem}
+.form-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:10px}
+.fg{display:flex;flex-direction:column;gap:3px}
+.fg label{font-size:11px;color:#999;text-transform:uppercase;letter-spacing:.5px}
+.fg input,.fg select,.fg textarea{padding:7px 10px;border:1px solid var(--border);border-radius:7px;font-size:13px;background:#fff;color:#1a1a1a;width:100%;font-family:inherit}
+.fg input:focus,.fg select:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 2px rgba(29,158,117,.15)}
+.btn{padding:8px 16px;border-radius:7px;font-size:13px;cursor:pointer;border:1px solid var(--border);background:#fff;color:#1a1a1a;display:inline-flex;align-items:center;gap:6px;font-family:inherit;transition:all .15s}
+.btn:hover{background:#f5f5f5}.btn:active{transform:scale(.98)}
+.btn.primary{background:var(--green);color:#fff;border-color:var(--green2)}.btn.primary:hover{background:var(--green2)}
+.btn.blue{background:var(--blue);color:#fff;border-color:#1a73e8}.btn.blue:hover{background:#1a73e8}
+.btn.red{background:var(--red);color:#fff;border-color:#A32D2D}
+.btn.small{padding:3px 9px;font-size:12px}
+.table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:10px;margin-bottom:1rem;background:#fff}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:#fafafa;padding:9px 12px;text-align:left;font-weight:500;font-size:11px;color:#999;border-bottom:1px solid var(--border);white-space:nowrap;text-transform:uppercase;letter-spacing:.4px}
+td{padding:8px 12px;border-bottom:1px solid #f5f5f5;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#fafff8}
+.badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:500;cursor:pointer}
+.badge.pago{background:#EAF3DE;color:#3B6D11}
+.badge.falta{background:#FCEBEB;color:#A32D2D}
+.badge.pendente{background:#FAEEDA;color:#854F0B}
+.chip{display:inline-flex;align-items:center;gap:4px;background:#f5f5f5;border-radius:10px;padding:2px 8px;font-size:12px}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.sync-bar{background:var(--green-bg);border:1px solid #9FE1CB;border-radius:8px;padding:8px 14px;font-size:12px;color:var(--green2);margin-bottom:1rem;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.login-screen{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;gap:20px}
+.login-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:2.5rem;text-align:center;max-width:380px;width:100%}
+.login-card h1{font-size:24px;color:var(--green2);margin-bottom:.5rem}
+.login-card p{color:#666;font-size:14px;margin-bottom:1.5rem}
+.notice{background:#FFF8E1;border:1px solid #FFD54F;border-radius:8px;padding:10px 14px;font-size:12px;color:#8B6914;margin:1rem 0}
+.fin-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.fin-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:14px}
+.fin-card h3{font-size:12px;font-weight:600;color:#999;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px}
+.sum-row{display:flex;justify-content:space-between;padding:5px 0;font-size:13px;border-bottom:1px solid #f5f5f5}
+.sum-row:last-child{border-bottom:none;font-weight:600;font-size:14px;margin-top:4px}
+@media(max-width:600px){.fin-grid{grid-template-columns:1fr}.main{padding:12px}}
+</style>
+</head>
+<body>
+
+<div id="login-view" class="main login-screen">
+  <div class="login-card">
+    <div style="font-size:36px;margin-bottom:.5rem">🐼</div>
+    <h1>PandaTour 2026</h1>
+    <p>Gestão de serviços com Google Sheets e Google Calendar</p>
+    <button class="btn blue" onclick="doLogin()" style="width:100%;justify-content:center;padding:10px">
+      <svg width="18" height="18" viewBox="0 0 18 18"><path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615z" fill="#4285F4"/><path d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 0 0 9 18z" fill="#34A853"/><path d="M3.964 10.71A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.042l3.007-2.332z" fill="#FBBC05"/><path d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.958L3.964 6.29C4.672 4.163 6.656 3.58 9 3.58z" fill="#EA4335"/></svg>
+      Entrar com Google
+    </button>
+    <p style="font-size:11px;color:#bbb;margin-top:12px">Os dados ficam na tua conta Google. Nenhum servidor externo.</p>
+  </div>
+</div>
+
+<div id="app-view" style="display:none">
+  <div class="topbar">
+    <div class="logo">Panda<span>Tour</span> <span style="font-size:13px;color:#999;font-weight:400">2026</span></div>
+    <div class="tabs">
+      <button class="tab active" onclick="showPanel('servicos',this)">Serviços</button>
+      <button class="tab" onclick="showPanel('financeiro',this)">Financeiro</button>
+      <button class="tab" onclick="showPanel('motoristas',this)">Motoristas</button>
+    </div>
+    <div class="user-bar">
+      <img id="user-avatar" class="avatar" src="" alt="" style="display:none">
+      <span id="user-name"></span>
+      <button class="btn small" onclick="doLogout()">Sair</button>
+    </div>
+  </div>
+
+  <div class="main">
+    <div id="sync-status" class="sync-bar" style="display:none">
+      <span id="sync-msg">A sincronizar...</span>
+      <button class="btn small" onclick="loadData()">↻ Atualizar</button>
+    </div>
+
+    <!-- SERVIÇOS -->
+    <div class="panel active" id="panel-servicos">
+      <div class="cards" id="cards-resumo"></div>
+      <div class="section-title">Adicionar serviço</div>
+      <div class="form-wrap">
+        <div class="form-row">
+          <div class="fg"><label>Data</label><input type="date" id="f-data"></div>
+          <div class="fg"><label>Hora</label><input type="time" id="f-hora"></div>
+          <div class="fg"><label>Tipo</label>
+            <select id="f-tipo">
+              <option>Transfer IN</option><option>Transfer OUT</option>
+              <option>Tour</option><option>Meet &amp; Greet</option><option>Outros</option>
+            </select>
+          </div>
+          <div class="fg"><label>Agência / Cliente</label><input type="text" id="f-agencia" placeholder="Ex: APEXTION DMC"></div>
+        </div>
+        <div class="form-row">
+          <div class="fg"><label>Destino / Hotel</label><input type="text" id="f-destino" placeholder="Ex: Aero → Borges"></div>
+          <div class="fg"><label>Motorista</label><select id="f-motorista"></select></div>
+          <div class="fg"><label>Valor PandaTour €</label><input type="number" id="f-valor" step="0.01" min="0" placeholder="0.00"></div>
+          <div class="fg"><label>Valor Parceiro €</label><input type="number" id="f-parceiro" step="0.01" min="0" placeholder="0.00"></div>
+        </div>
+        <div class="form-row">
+          <div class="fg"><label>Voucher €</label><input type="number" id="f-voucher" step="0.01" min="0" placeholder="0.00"></div>
+          <div class="fg"><label>Tip €</label><input type="number" id="f-tip" step="0.01" min="0" placeholder="0.00"></div>
+          <div class="fg"><label>Pagamento</label>
+            <select id="f-pago"><option>Pago</option><option>Falta</option><option>MB Way</option><option>Link</option><option>SumUp</option></select>
+          </div>
+          <div class="fg"><label>Notas</label><input type="text" id="f-notas" placeholder="Observações..."></div>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px">
+          <button class="btn primary" onclick="addServico()">+ Adicionar e guardar</button>
+          <button class="btn" onclick="clearForm()">Limpar</button>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
+        <select id="fil-mes" onchange="renderTable()" style="padding:5px 9px;border:1px solid var(--border);border-radius:7px;font-size:12px">
+          <option value="">Todos os meses</option>
+          <option value="01">Janeiro</option><option value="02">Fevereiro</option>
+          <option value="03">Março</option><option value="04">Abril</option>
+          <option value="05">Maio</option><option value="06">Junho</option>
+          <option value="07">Julho</option><option value="08">Agosto</option>
+          <option value="09">Setembro</option><option value="10">Outubro</option>
+          <option value="11">Novembro</option><option value="12">Dezembro</option>
+        </select>
+        <select id="fil-motorista" onchange="renderTable()" style="padding:5px 9px;border:1px solid var(--border);border-radius:7px;font-size:12px">
+          <option value="">Todos os motoristas</option>
+        </select>
+        <select id="fil-pago" onchange="renderTable()" style="padding:5px 9px;border:1px solid var(--border);border-radius:7px;font-size:12px">
+          <option value="">Todos os estados</option>
+          <option>Pago</option><option>Falta</option>
+        </select>
+        <input id="fil-search" type="text" placeholder="Pesquisar..." oninput="renderTable()" style="padding:5px 9px;border:1px solid var(--border);border-radius:7px;font-size:12px;min-width:130px">
+        <button class="btn blue small" onclick="exportCalSelected()">📅 Exportar selecionados → Calendar</button>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr>
+            <th><input type="checkbox" id="chk-all" onchange="toggleAll(this)"></th>
+            <th>Data</th><th>Hora</th><th>Tipo</th><th>Agência</th>
+            <th>Destino</th><th>Motorista</th><th>Panda €</th>
+            <th>Parceiro €</th><th>Vch</th><th>Tip</th>
+            <th>Estado</th><th>Cal</th><th>Del</th>
+          </tr></thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+      <div id="empty-msg" style="text-align:center;padding:2rem;color:#999;font-size:13px;display:none">Sem serviços. Adiciona o primeiro acima.</div>
+    </div>
+
+    <!-- FINANCEIRO -->
+    <div class="panel" id="panel-financeiro">
+      <div class="cards" id="cards-fin"></div>
+      <div class="fin-grid">
+        <div class="fin-card"><h3>Por mês</h3><div id="fin-mes"></div></div>
+        <div class="fin-card"><h3>Por motorista</h3><div id="fin-driver"></div></div>
+      </div>
+      <div class="fin-card" style="margin-bottom:1rem"><h3>Valores em falta</h3><div id="fin-falta"></div></div>
+      <div class="fin-card"><h3>Dívida Paulo 2026</h3>
+        <div id="fin-paulo">
+          <div class="sum-row"><span>Dívida inicial</span><span style="color:var(--red)">€10,300.00</span></div>
+          <div class="sum-row"><span>Jan</span><span>€687.45</span></div>
+          <div class="sum-row"><span>Fev</span><span>€648.97</span></div>
+          <div class="sum-row"><span>Mar</span><span>€776.75</span></div>
+          <div class="sum-row"><span>Abr</span><span>€684.32</span></div>
+          <div class="sum-row"><span>Total pago</span><span style="color:var(--green)">€2,797.49</span></div>
+          <div class="sum-row"><span>Saldo em falta</span><span style="color:var(--red)">€7,502.51</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOTORISTAS -->
+    <div class="panel" id="panel-motoristas">
+      <div class="section-title">Motoristas</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1rem" id="driver-legend"></div>
+      <div style="display:flex;gap:8px;align-items:flex-end;margin-bottom:1rem;flex-wrap:wrap">
+        <div class="fg"><label>Nome</label><input type="text" id="new-drv" placeholder="Nome do motorista" style="width:180px"></div>
+        <div class="fg"><label>Cor</label><input type="color" id="new-drv-color" value="#1D9E75" style="height:34px;padding:2px 6px;cursor:pointer;border:1px solid var(--border);border-radius:7px;width:60px"></div>
+        <button class="btn primary" onclick="addMotorista()">Adicionar</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Motorista</th><th>Serviços</th><th>Total €</th><th>Parceiro €</th><th>Pagos</th><th>Em falta</th><th></th></tr></thead>
+          <tbody id="tbody-drivers"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const CLIENT_ID='https://docs.google.com/spreadsheets/d/1zNx96p9BRF7kURdCNvvRSN4Q7ewwqtclqyYrkvIMOxM/edit?gid=0#gid=0';
+const SHEET_ID='174916148434-m89op8gpken2rcqtsti302hnkoaqs0mr.apps.googleusercontent.com';
+const SCOPES='https://www.googleapis.com/auth/spreadsheets https://www.googleapis.com/auth/calendar';
+const SHEET_NAME='Servicos2026';
+const MESES=['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+
+let tokenClient,accessToken=null;
+let servicos=[];
+let motoristas=JSON.parse(localStorage.getItem('pt_motoristas')||'null')||[
+  {nome:'PANDA',cor:'#1D9E75'},{nome:'IGOR',cor:'#4285F4'},
+  {nome:'IDALINA',cor:'#E24B4A'},{nome:'HENRIQUE',cor:'#EF9F27'},
+  {nome:'JÚLIA',cor:'#534AB7'},{nome:'RUI D.',cor:'#D85A30'},
+  {nome:'KSENIA',cor:'#0F6E56'}
+];
+
+function saveLocal(){localStorage.setItem('pt_motoristas',JSON.stringify(motoristas));}
+function fmtN(v){return v!=null&&v!==''?parseFloat(v)||0:0;}
+function e(id){return document.getElementById(id);}
+
+window.onload=function(){
+  const s=document.createElement('script');
+  s.src='https://accounts.google.com/gsi/client';
+  s.onload=initGSI;document.head.appendChild(s);
+};
+
+function initGSI(){
+  tokenClient=google.accounts.oauth2.initTokenClient({
+    client_id:CLIENT_ID,scope:SCOPES,
+    callback:async(resp)=>{
+      if(resp.error)return;
+      accessToken=resp.access_token;
+      showApp();
+      await ensureSheet();
+      await loadData();
+    }
+  });
+  const stored=sessionStorage.getItem('pt_token');
+  if(stored){accessToken=stored;showApp();loadData();}
+}
+
+function doLogin(){tokenClient.requestAccessToken();}
+function doLogout(){
+  accessToken=null;sessionStorage.removeItem('pt_token');
+  e('login-view').style.display='flex';e('app-view').style.display='none';
+}
+
+function showApp(){
+  sessionStorage.setItem('pt_token',accessToken);
+  e('login-view').style.display='none';e('app-view').style.display='block';
+  initMotoristaSelects();renderDriverLegend();
+  const u=JSON.parse(sessionStorage.getItem('pt_user')||'{}');
+  if(u.name)e('user-name').textContent=u.name;
+  if(u.picture){e('user-avatar').src=u.picture;e('user-avatar').style.display='block';}
+  fetchUserInfo();
+}
+
+async function fetchUserInfo(){
+  try{
+    const r=await fetch('https://www.googleapis.com/oauth2/v3/userinfo',{headers:{Authorization:'Bearer '+accessToken}});
+    const u=await r.json();
+    sessionStorage.setItem('pt_user',JSON.stringify(u));
+    e('user-name').textContent=u.name||'';
+    if(u.picture){e('user-avatar').src=u.picture;e('user-avatar').style.display='block';}
+  }catch(e){}
+}
+
+async function sheetsReq(method,path,body){
+  const url='https://sheets.googleapis.com/v4/spreadsheets/'+SHEET_ID+path;
+  const opts={method,headers:{'Authorization':'Bearer '+accessToken,'Content-Type':'application/json'}};
+  if(body)opts.body=JSON.stringify(body);
+  const r=await fetch(url,opts);
+  return r.json();
+}
+
+async function ensureSheet(){
+  try{
+    const info=await sheetsReq('GET','');
+    const exists=info.sheets&&info.sheets.some(s=>s.properties.title===SHEET_NAME);
+    if(!exists){
+      await sheetsReq('POST',':batchUpdate',{requests:[{addSheet:{properties:{title:SHEET_NAME}}}]});
+      await sheetsReq('PUT','/values/'+SHEET_NAME+'!A1:N1?valueInputOption=RAW',{values:[['ID','Data','Hora','Tipo','Agencia','Destino','Motorista','Valor','Parceiro','Voucher','Tip','Pago','Notas','CalEventId']]});
+    }
+  }catch(err){console.warn('ensureSheet',err);}
+}
+
+async function loadData(){
+  showSync('A carregar dados...');
+  try{
+    const r=await sheetsReq('GET','/values/'+SHEET_NAME+'!A2:N1000');
+    const rows=r.values||[];
+    servicos=rows.map(r=>({
+      id:r[0]||'',data:r[1]||'',hora:r[2]||'',tipo:r[3]||'',
+      agencia:r[4]||'',destino:r[5]||'',motorista:r[6]||'',
+      valor:r[7]||'',parceiro:r[8]||'',voucher:r[9]||'',
+      tip:r[10]||'',pago:r[11]||'',notas:r[12]||'',calEventId:r[13]||''
+    })).filter(s=>s.id);
+    renderTable();renderCards();
+    showSync('Sincronizado com Google Sheets ✓');
+    setTimeout(()=>e('sync-status').style.display='none',3000);
+  }catch(err){showSync('Erro ao carregar: '+err.message);}
+}
+
+function showSync(msg){
+  e('sync-status').style.display='flex';
+  e('sync-msg').textContent=msg;
+}
+
+async function appendRow(s){
+  await sheetsReq('POST','/values/'+SHEET_NAME+'!A:N:append?valueInputOption=RAW&insertDataOption=INSERT_ROWS',{
+    values:[[s.id,s.data,s.hora,s.tipo,s.agencia,s.destino,s.motorista,s.valor,s.parceiro,s.voucher,s.tip,s.pago,s.notas,s.calEventId||'']]
+  });
+}
+
+async function deleteRow(id){
+  const idx=servicos.findIndex(s=>s.id===id);
+  if(idx<0)return;
+  const rowNum=idx+2;
+  await sheetsReq('POST',':batchUpdate',{requests:[{deleteDimension:{range:{sheetId:await getSheetGid(),dimension:'ROWS',startIndex:rowNum-1,endIndex:rowNum}}}]});
+  servicos.splice(idx,1);
+  renderTable();renderCards();
+}
+
+async function getSheetGid(){
+  const info=await sheetsReq('GET','');
+  const sh=info.sheets.find(s=>s.properties.title===SHEET_NAME);
+  return sh?sh.properties.sheetId:0;
+}
+
+async function updateCell(id,col,val){
+  const idx=servicos.findIndex(s=>s.id===id);
+  if(idx<0)return;
+  const rowNum=idx+2;
+  const colLetter=String.fromCharCode(65+col);
+  await sheetsReq('PUT','/values/'+SHEET_NAME+'!'+colLetter+rowNum+'?valueInputOption=RAW',{values:[[val]]});
+}
+
+async function addServico(){
+  const data=e('f-data').value;
+  if(!data){alert('Insere a data!');return;}
+  const s={
+    id:'srv_'+Date.now(),
+    data,hora:e('f-hora').value,tipo:e('f-tipo').value,
+    agencia:e('f-agencia').value,destino:e('f-destino').value,
+    motorista:e('f-motorista').value,valor:e('f-valor').value,
+    parceiro:e('f-parceiro').value,voucher:e('f-voucher').value,
+    tip:e('f-tip').value,pago:e('f-pago').value,
+    notas:e('f-notas').value,calEventId:''
+  };
+  showSync('A guardar...');
+  try{
+    await appendRow(s);
+    servicos.push(s);
+    servicos.sort((a,b)=>a.data.localeCompare(b.data));
+    renderTable();renderCards();clearForm();
+    showSync('Guardado no Google Sheets ✓');
+    setTimeout(()=>e('sync-status').style.display='none',2500);
+  }catch(err){showSync('Erro: '+err.message);}
+}
+
+function clearForm(){
+  ['f-data','f-hora','f-agencia','f-destino','f-valor','f-parceiro','f-voucher','f-tip','f-notas'].forEach(id=>e(id).value='');
+}
+
+async function togglePago(id){
+  const s=servicos.find(x=>x.id===id);if(!s)return;
+  s.pago=s.pago==='Pago'?'Falta':'Pago';
+  renderTable();renderCards();
+  await updateCell(id,11,s.pago);
+}
+
+async function deleteServico(id){
+  if(!confirm('Remover serviço?'))return;
+  showSync('A remover...');
+  try{await deleteRow(id);showSync('Removido ✓');setTimeout(()=>e('sync-status').style.display='none',2000);}
+  catch(err){showSync('Erro: '+err.message);}
+}
+
+async function addToCalendar(id){
+  const s=servicos.find(x=>x.id===id);if(!s)return;
+  const d=s.data.replace(/-/g,'');
+  const hh=s.hora?s.hora.split(':'):[9,0];
+  const start=d+'T'+(hh[0]+'').padStart(2,'0')+(hh[1]+'').padStart(2,'0')+'00';
+  const endH=(parseInt(hh[0])+1).toString().padStart(2,'0');
+  const end=d+'T'+endH+(hh[1]+'').padStart(2,'0')+'00';
+  const event={
+    summary:s.tipo+(s.agencia?' – '+s.agencia:'')+(s.destino?' ('+s.destino+')':''),
+    description:'Motorista: '+s.motorista+'\nValor: €'+fmtN(s.valor).toFixed(2)+'\nEstado: '+s.pago+(s.notas?'\nNotas: '+s.notas:''),
+    start:{dateTime:s.data+'T'+(s.hora||'09:00')+':00',timeZone:'Europe/Lisbon'},
+    end:{dateTime:s.data+'T'+endH+':'+(hh[1]+'').padStart(2,'0')+':00',timeZone:'Europe/Lisbon'},
+    colorId:s.tipo.includes('IN')?'2':s.tipo.includes('OUT')?'11':'5'
+  };
+  try{
+    const r=await fetch('https://www.googleapis.com/calendar/v3/calendars/primary/events',{
+      method:'POST',
+      headers:{'Authorization':'Bearer '+accessToken,'Content-Type':'application/json'},
+      body:JSON.stringify(event)
+    });
+    const ev=await r.json();
+    s.calEventId=ev.id||'';
+    await updateCell(id,13,s.calEventId);
+    renderTable();
+    alert('Adicionado ao Google Calendar!');
+  }catch(err){alert('Erro Calendar: '+err.message);}
+}
+
+async function exportCalSelected(){
+  const checked=[...document.querySelectorAll('.chk-row:checked')].map(c=>c.dataset.id);
+  if(!checked.length){alert('Seleciona pelo menos um serviço!');return;}
+  showSync('A exportar '+checked.length+' eventos...');
+  for(const id of checked){await addToCalendar(id);}
+  showSync('Exportado para Google Calendar ✓');
+  setTimeout(()=>e('sync-status').style.display='none',3000);
+}
+
+function toggleAll(cb){
+  document.querySelectorAll('.chk-row').forEach(c=>c.checked=cb.checked);
+}
+
+function getFiltered(){
+  const mes=e('fil-mes').value;
+  const mot=e('fil-motorista').value;
+  const pag=e('fil-pago').value;
+  const srch=(e('fil-search').value||'').toLowerCase();
+  return servicos.filter(s=>{
+    if(mes&&!s.data.startsWith('2026-'+mes))return false;
+    if(mot&&s.motorista!==mot)return false;
+    if(pag&&s.pago!==pag)return false;
+    if(srch&&![s.agencia,s.destino,s.motorista,s.tipo,s.notas].join(' ').toLowerCase().includes(srch))return false;
+    return true;
+  });
+}
+
+function getDriverColor(n){const m=motoristas.find(d=>d.nome===n);return m?m.cor:'#999';}
+
+function renderTable(){
+  const data=getFiltered();
+  const tbody=e('tbody');
+  e('empty-msg').style.display=data.length?'none':'block';
+  if(!data.length){tbody.innerHTML='';return;}
+  tbody.innerHTML=data.map(s=>{
+    const dc=getDriverColor(s.motorista);
+    const calBtn=s.calEventId?'<span style="color:#4285F4;font-size:12px">✓ Cal</span>':'<button class="btn small blue" onclick="addToCalendar(''+s.id+'')">+ Cal</button>';
+    return `<tr>
+      <td><input type="checkbox" class="chk-row" data-id="${s.id}"></td>
+      <td>${s.data}</td><td>${s.hora||'—'}</td>
+      <td style="color:${s.tipo.includes('IN')?'#185FA5':s.tipo.includes('OUT')?'#A32D2D':'#3B6D11'};font-weight:500">${s.tipo}</td>
+      <td>${s.agencia||'—'}</td>
+      <td style="max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${s.destino}">${s.destino||'—'}</td>
+      <td><span class="chip"><span class="dot" style="background:${dc}"></span>${s.motorista||'—'}</span></td>
+      <td style="font-weight:500">${s.valor?'€'+parseFloat(s.valor).toFixed(2):'—'}</td>
+      <td>${s.parceiro?'€'+parseFloat(s.parceiro).toFixed(2):'—'}</td>
+      <td>${s.voucher?'€'+parseFloat(s.voucher).toFixed(2):'—'}</td>
+      <td>${s.tip?'€'+parseFloat(s.tip).toFixed(2):'—'}</td>
+      <td><span class="badge ${s.pago==='Pago'?'pago':s.pago==='Falta'?'falta':'pendente'}" onclick="togglePago('${s.id}')" title="Clica para alternar">${s.pago}</span></td>
+      <td>${calBtn}</td>
+      <td><button class="btn small red" onclick="deleteServico('${s.id}')">✕</button></td>
+    </tr>`;
+  }).join('');
+}
+
+function renderCards(){
+  const tot=servicos.reduce((a,s)=>a+fmtN(s.valor),0);
+  const pago=servicos.filter(s=>s.pago==='Pago').reduce((a,s)=>a+fmtN(s.valor),0);
+  const falta=servicos.filter(s=>s.pago==='Falta').reduce((a,s)=>a+fmtN(s.valor),0);
+  const parc=servicos.reduce((a,s)=>a+fmtN(s.parceiro),0);
+  const liq=tot-parc;
+  e('cards-resumo').innerHTML=`
+    <div class="card"><div class="card-label">Serviços</div><div class="card-value">${servicos.length}</div></div>
+    <div class="card"><div class="card-label">Faturado</div><div class="card-value green">€${tot.toFixed(2)}</div></div>
+    <div class="card"><div class="card-label">Recebido</div><div class="card-value green">€${pago.toFixed(2)}</div></div>
+    <div class="card"><div class="card-label">Em falta</div><div class="card-value red">€${falta.toFixed(2)}</div></div>
+    <div class="card"><div class="card-label">Líquido est.</div><div class="card-value amber">€${liq.toFixed(2)}</div></div>
+  `;
+}
+
+function renderFinanceiro(){
+  const tot=servicos.reduce((a,s)=>a+fmtN(s.valor),0);
+  const pago=servicos.filter(s=>s.pago==='Pago').reduce((a,s)=>a+fmtN(s.valor),0);
+  const falta=servicos.filter(s=>s.pago==='Falta').reduce((a,s)=>a+fmtN(s.valor),0);
+  const parc=servicos.reduce((a,s)=>a+fmtN(s.parceiro),0);
+  e('cards-fin').innerHTML=`
+    <div class="card"><div class="card-label">Total</div><div class="card-value green">€${tot.toFixed(2)}</div></div>
+    <div class="card"><div class="card-label">Recebido</div><div class="card-value green">€${pago.toFixed(2)}</div></div>
+    <div class="card"><div class="card-label">Em falta</div><div class="card-value red">€${falta.toFixed(2)}</div></div>
+    <div class="card"><div class="card-label">Total parceiros</div><div class="card-value amber">€${parc.toFixed(2)}</div></div>
+  `;
+  const byMes={};
+  servicos.forEach(s=>{const m=s.data.substring(5,7);if(!byMes[m])byMes[m]={tot:0,n:0};byMes[m].tot+=fmtN(s.valor);byMes[m].n++;});
+  e('fin-mes').innerHTML=Object.keys(byMes).sort().map(m=>`<div class="sum-row"><span>${MESES[parseInt(m)-1]} (${byMes[m].n})</span><span style="color:var(--green)">€${byMes[m].tot.toFixed(2)}</span></div>`).join('')+`<div class="sum-row"><span>TOTAL</span><span>€${tot.toFixed(2)}</span></div>`||'<p style="color:#999;font-size:13px">Sem dados</p>';
+  const byDrv={};
+  servicos.forEach(s=>{const d=s.motorista||'—';if(!byDrv[d])byDrv[d]={tot:0,n:0};byDrv[d].tot+=fmtN(s.valor);byDrv[d].n++;});
+  e('fin-driver').innerHTML=Object.keys(byDrv).sort().map(d=>{const dc=getDriverColor(d);return`<div class="sum-row"><span><span class="dot" style="background:${dc};margin-right:5px"></span>${d} (${byDrv[d].n})</span><span>€${byDrv[d].tot.toFixed(2)}</span></div>`}).join('')||'<p style="color:#999;font-size:13px">Sem dados</p>';
+  const faltaList=servicos.filter(s=>s.pago==='Falta');
+  e('fin-falta').innerHTML=faltaList.length?faltaList.map(s=>`<div class="sum-row"><span>${s.data} – ${s.agencia||s.destino||'?'}</span><span style="color:var(--red)">€${fmtN(s.valor).toFixed(2)}</span></div>`).join(''):'<p style="color:var(--green);font-size:13px">Tudo recebido!</p>';
+}
+
+function renderMotoristas(){
+  renderDriverLegend();
+  const stats={};
+  motoristas.forEach(m=>{stats[m.nome]={n:0,tot:0,parc:0,pago:0,falta:0};});
+  servicos.forEach(s=>{const d=s.motorista;if(!d||!stats[d])return;stats[d].n++;stats[d].tot+=fmtN(s.valor);stats[d].parc+=fmtN(s.parceiro);if(s.pago==='Pago')stats[d].pago++;else stats[d].falta++;});
+  e('tbody-drivers').innerHTML=motoristas.map(m=>{const st=stats[m.nome]||{n:0,tot:0,parc:0,pago:0,falta:0};return`<tr><td><span class="chip"><span class="dot" style="background:${m.cor}"></span>${m.nome}</span></td><td>${st.n}</td><td>€${st.tot.toFixed(2)}</td><td>€${st.parc.toFixed(2)}</td><td><span class="badge pago">${st.pago}</span></td><td><span class="badge falta">${st.falta}</span></td><td><button class="btn small red" onclick="removeMotorista('${m.nome}')">✕</button></td></tr>`;}).join('');
+}
+
+function renderDriverLegend(){
+  const el=e('driver-legend');if(!el)return;
+  el.innerHTML=motoristas.map(m=>`<span class="chip"><span class="dot" style="background:${m.cor}"></span>${m.nome}</span>`).join('');
+}
+
+function initMotoristaSelects(){
+  ['f-motorista','fil-motorista'].forEach(id=>{
+    const sel=e(id);if(!sel)return;
+    const prev=sel.value;
+    sel.innerHTML=id.startsWith('fil')?'<option value="">Todos</option>':'';
+    motoristas.forEach(m=>{const o=document.createElement('option');o.value=m.nome;o.textContent=m.nome;sel.appendChild(o);});
+    if(prev)sel.value=prev;
+  });
+}
+
+function addMotorista(){
+  const n=(e('new-drv').value||'').trim().toUpperCase();
+  const c=e('new-drv-color').value;
+  if(!n||motoristas.find(m=>m.nome===n))return;
+  motoristas.push({nome:n,cor:c});saveLocal();
+  initMotoristaSelects();renderDriverLegend();renderMotoristas();
+  e('new-drv').value='';
+}
+
+function removeMotorista(n){
+  if(!confirm('Remover '+n+'?'))return;
+  motoristas=motoristas.filter(m=>m.nome!==n);saveLocal();
+  initMotoristaSelects();renderDriverLegend();renderMotoristas();
+}
+
+function showPanel(id,btn){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  e('panel-'+id).classList.add('active');
+  btn.classList.add('active');
+  if(id==='financeiro')renderFinanceiro();
+  if(id==='motoristas')renderMotoristas();
+}
+</script>
+</body>
+</html>
