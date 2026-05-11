@@ -9,47 +9,38 @@
     body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0a;color:#e8e8e8;font-size:13px}
     :root{--gold:#C9A84C;--gold2:#E8C96A;--dark:#0a0a0a;--dark2:#111;--dark3:#1a1a1a;--dark4:#242424;--bdr:#2a2a2a;--bdr2:#333;--red:#E24B4A;--green:#1D9E75;--text:#e8e8e8;--text2:#aaa}
     
-    /* Topbar & Navegação */
-    .topbar{background:#111;border-bottom:1px solid var(--bdr);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:8px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.6)}
+    .topbar{background:#111;border-bottom:1px solid var(--bdr);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.6)}
     .logo-img{height:36px;width:auto}
     .tabs{display:flex;gap:4px;background:#1a1a1a;border-radius:8px;padding:3px;border:1px solid var(--bdr);overflow-x:auto;scrollbar-width:none}
-    .tabs::-webkit-scrollbar {display:none}
-    .tab{padding:8px 16px;border-radius:5px;font-size:11px;cursor:pointer;border:none;background:transparent;color:var(--text2);font-weight:500;white-space:nowrap;transition:0.2s}
+    .tab{padding:8px 16px;border-radius:5px;font-size:11px;cursor:pointer;border:none;background:transparent;color:var(--text2);font-weight:500;white-space:nowrap}
     .tab.active{background:var(--gold);color:#000;font-weight:700}
     
-    .sync-indicator { font-size: 10px; color: var(--green); margin-right: 10px; display: flex; align-items: center; gap: 4px; font-weight:600}
+    .sync-indicator { font-size: 10px; color: var(--green); display: flex; align-items: center; gap: 4px; font-weight:600}
     .main{padding:15px;max-width:1600px;margin:0 auto}
     .panel{display:none} .panel.active{display:block}
     
-    /* Tabelas */
     .tw{overflow-x:auto;border:1px solid var(--bdr2);border-radius:10px;background:var(--dark3);margin-top:15px}
     table{width:100%;border-collapse:collapse;font-size:11px}
     th{background:var(--dark2);padding:12px 10px;text-align:left;color:var(--gold);border-bottom:1px solid var(--bdr2);text-transform:uppercase;font-size:9px;letter-spacing:0.5px}
     td{padding:12px 10px;border-bottom:1px solid var(--bdr);color:var(--text);vertical-align:middle}
     tr:hover td{background:rgba(201,168,76,0.05)}
     
-    /* Badges Status */
-    .badge{padding:3px 8px;border-radius:5px;font-size:9px;font-weight:700;text-transform:uppercase;display:inline-block}
+    .badge{padding:4px 8px;border-radius:5px;font-size:9px;font-weight:700;text-transform:uppercase;display:inline-block}
     .b-pago{background:#0d2a1a;color:#2ECC71;border:1px solid #1a4d2e}
     .b-falta{background:#2a0d0d;color:var(--red);border:1px solid #4d1a1a}
 
-    /* Formulários e Botões */
     .fw{background:var(--dark3);border:1px solid var(--bdr2);border-radius:10px;padding:15px;margin-bottom:15px}
-    .btn{padding:8px 15px;border-radius:6px;font-size:11px;cursor:pointer;border:1px solid var(--bdr2);background:var(--dark4);color:#fff;font-weight:600;transition:0.2s}
+    .btn{padding:8px 15px;border-radius:6px;font-size:11px;cursor:pointer;border:1px solid var(--bdr2);background:var(--dark4);color:#fff;font-weight:600}
     .btn.primary{background:var(--gold);color:#000;border:none}
-    
-    /* Login */
-    .ls{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;background:#000}
-    .lc{background:var(--dark3);padding:40px;border-radius:24px;text-align:center;border:1px solid var(--bdr2);width:90%;max-width:380px}
 </style>
 </head>
 <body>
 
-<div id="login-view" class="ls">
-    <div class="lc">
-        <img src="https://semanalgabarito-dot.github.io/pandatour2026/LOGOSEMFUNDO.png" style="width:200px;margin-bottom:20px">
-        <h1 style="font-size:11px;letter-spacing:4px;color:var(--text2);margin-bottom:30px;font-weight:400">PANDATOUR GESTÃO 2026</h1>
-        <button class="btn primary" style="width:100%;padding:18px;letter-spacing:1px" onclick="initApp()">ENTRAR NO SISTEMA</button>
+<div id="login-view" style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100vh; background:#000">
+    <div style="background:var(--dark3); padding:40px; border-radius:24px; text-align:center; border:1px solid var(--bdr2); width:90%; max-width:380px">
+        <img src="https://semanalgabarito-dot.github.io/pandatour2026/LOGOSEMFUNDO.png" style="width:200px; margin-bottom:20px">
+        <h1 style="font-size:11px; letter-spacing:4px; color:var(--text2); margin-bottom:30px">GESTOR OPERACIONAL 2026</h1>
+        <button class="btn primary" style="width:100%; padding:18px" onclick="initApp()">ENTRAR</button>
     </div>
 </div>
 
@@ -60,11 +51,10 @@
             <button class="tab active" onclick="showPanel('servicos',this)">📋 Serviços</button>
             <button class="tab" onclick="showPanel('anual',this)">📊 Anual</button>
             <button class="tab" onclick="showPanel('financeiro',this)">💰 Finanças</button>
-            <button class="tab" onclick="showPanel('despesas',this)">💸 Despesas</button>
         </div>
-        <div style="display:flex;align-items:center">
+        <div style="display:flex; align-items:center; gap:10px">
             <span id="sync-status" class="sync-indicator">● Offline</span>
-            <button class="btn" style="padding:6px 12px; border-color:var(--gold); color:var(--gold)" onclick="fetchData()">↻ Refresh</button>
+            <button class="btn" style="padding:6px 10px" onclick="fetchData()">↻</button>
         </div>
     </div>
 
@@ -74,55 +64,29 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>Data/Hora</th><th>Tipo</th><th>Origem</th><th>Cliente</th><th>Trajeto</th><th>Motorista</th><th>Valor €</th><th>Estado</th>
+                            <th>Data/Hora</th><th>Tipo</th><th>Agência</th><th>Trajeto</th><th>Motorista</th><th>Valor €</th><th>Estado</th>
                         </tr>
                     </thead>
                     <tbody id="body-servicos">
-                        <tr><td colspan="8" style="text-align:center;padding:40px;color:#666">A carregar serviços de 2026...</td></tr>
+                        <tr><td colspan="7" style="text-align:center; padding:40px">A ligar ao Google Sheets...</td></tr>
                     </tbody>
                 </table>
             </div>
         </div>
 
-        <div id="panel-anual" class="panel">
-            <div class="tw">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Mês</th><th>Panda €</th><th>Carla €</th><th>Líquido</th><th>Uber</th><th>Bolt</th>
-                        </tr>
-                    </thead>
-                    <tbody id="body-anual"></tbody>
-                </table>
-            </div>
-        </div>
-
-        <div id="panel-financeiro" class="panel">
-            <div class="fw">
-                <h3 style="color:var(--gold)">Resumo de Fluxo</h3>
-                <div id="fin-summary" style="margin-top:15px"></div>
-            </div>
-        </div>
-
-        <div id="panel-despesas" class="panel">
-            <div class="fw">
-                <h3 style="color:var(--gold); margin-bottom:15px">Custos Fixos / Tesla</h3>
-                <div id="list-despesas"></div>
-            </div>
-        </div>
+        <div id="panel-anual" class="panel"><div class="tw"><table><thead><tr><th>Mês</th><th>Panda €</th><th>Carla €</th><th>Líquido</th><th>Uber</th><th>Bolt</th></tr></thead><tbody id="body-anual"></tbody></table></div></div>
+        <div id="panel-financeiro" class="panel"><div class="fw"><h3>Resumo Financeiro</h3><p style="margin-top:10px; color:#666">Dados carregados do Sheets.</p></div></div>
     </div>
 </div>
 
 <script>
-// NOVO LINK FORNECIDO
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzcsIegjMzdCCj_RIG7DIb8-H39xlLImT03gxxBec05NY_De1aMTGg53x4vuQS6ztiOgw/exec";
-let currentData = { servicos: [], anual: [], despesas: [] };
+// URL DA VERSÃO 3 ATUALIZADO
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw7Atiakbg14OH3sPPM5rPDh0BoWoEz8DGr6Ui50MT7WoNEx1svi3SvP_5tNp1dylaJEg/exec";
 
 function initApp() {
     document.getElementById('login-view').style.display = 'none';
     document.getElementById('app-view').style.display = 'block';
     fetchData();
-    setInterval(fetchData, 300000); // Auto-refresh 5 min
 }
 
 function showPanel(id, btn) {
@@ -135,52 +99,53 @@ function showPanel(id, btn) {
 async function fetchData() {
     const status = document.getElementById('sync-status');
     status.style.color = '#C9A84C';
-    status.innerText = '● Sincronizando...';
+    status.innerText = '● Atualizando...';
 
     try {
         const response = await fetch(SCRIPT_URL);
         const data = await response.json();
-        currentData = data;
         
         renderServicos(data.servicos || []);
         renderAnual(data.anual || []);
-        renderDespesas(data.despesas || {});
         
         status.style.color = '#1D9E75';
-        const now = new Date();
-        status.innerText = '● Online ' + now.getHours() + ':' + String(now.getMinutes()).padStart(2, '0');
+        status.innerText = '● Online ' + new Date().getHours() + ':' + String(new Date().getMinutes()).padStart(2, '0');
     } catch (e) {
         status.style.color = '#E24B4A';
-        status.innerText = '● Erro de Ligação';
-        console.error("Erro ao carregar dados:", e);
+        status.innerText = '● Erro Sinc.';
+        console.error(e);
     }
 }
 
 function renderServicos(list) {
     const body = document.getElementById('body-servicos');
     if(!list || list.length === 0) {
-        body.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:20px">Nenhum serviço encontrado no Sheets.</td></tr>';
+        body.innerHTML = '<tr><td colspan="7" style="text-align:center; padding:20px">Nenhum serviço encontrado no Sheets.</td></tr>';
         return;
     }
 
-    // ORDENAÇÃO CRONOLÓGICA (Data e Hora)
+    // ORDENAÇÃO POR DATA E HORA
     const sorted = [...list].sort((a, b) => {
-        const dateA = new Date((a.data || '2026-01-01') + 'T' + (a.hora || '00:00'));
-        const dateB = new Date((b.data || '2026-01-01') + 'T' + (b.hora || '00:00'));
-        return dateA - dateB;
+        const parseDate = (d, h) => {
+            if(!d) return new Date(0);
+            const parts = d.split('/'); 
+            const dateStr = parts.length === 3 ? `${parts[2]}-${parts[1]}-${parts[0]}` : d;
+            return new Date(dateStr + 'T' + (h || '00:00'));
+        };
+        return parseDate(a.data, a.hora) - parseDate(b.data, b.hora);
     });
 
     body.innerHTML = sorted.map(s => {
-        const isPago = s.pago && (s.pago.toString().toLowerCase().includes('pago') || s.pago.toString().toLowerCase() === 'sim');
+        const pagoTxt = s.pago ? s.pago.toString().toUpperCase() : '';
+        const isPago = pagoTxt.includes('PAGO') || pagoTxt === 'SIM';
         return `
         <tr>
             <td><div style="font-weight:700">${s.data || ''}</div><div style="color:var(--gold); font-size:10px">${s.hora || ''}</div></td>
             <td>${s.tipo || ''}</td>
-            <td style="font-size:10px; opacity:0.6">${s.origem || ''}</td>
-            <td>${s.cliente || ''}</td>
-            <td style="font-size:10px">${s.trajeto || s.destino || ''}</td>
+            <td style="font-size:10px; opacity:0.7">${s.origem || ''}</td>
+            <td>${s.trajeto || ''}</td>
             <td>${s.motorista || ''}</td>
-            <td style="font-weight:700">${s.valor || 0}€</td>
+            <td style="font-weight:700">${s.valor || '0'}€</td>
             <td><span class="badge ${isPago ? 'b-pago' : 'b-falta'}">${isPago ? 'PAGO' : 'FALTA'}</span></td>
         </tr>`;
     }).join('');
@@ -188,31 +153,16 @@ function renderServicos(list) {
 
 function renderAnual(list) {
     const body = document.getElementById('body-anual');
-    if(!list || list.length === 0) return;
+    if(!list) return;
     body.innerHTML = list.map(m => `
         <tr>
             <td style="color:var(--gold); font-weight:700">${m.mes}</td>
             <td>${m.panda || 0}€</td>
             <td>${m.carla_euro || 0}€</td>
-            <td style="background:rgba(29,158,117,0.1); font-weight:700">${m.liquido || 0}€</td>
+            <td style="color:var(--green); font-weight:700">${m.liquido || 0}€</td>
             <td>${m.uber || 0}€</td>
             <td>${m.bolt || 0}€</td>
         </tr>`).join('');
-}
-
-function renderDespesas(d) {
-    const container = document.getElementById('list-despesas');
-    const items = [
-        {label: 'Tesla Prestação', value: d.tesla_carro},
-        {label: 'Via Verde', value: d.via_verde},
-        {label: 'Energia (Tesla/Powerdot)', value: d.energia},
-        {label: 'Seguro', value: d.seguro}
-    ];
-    container.innerHTML = items.map(i => `
-        <div style="display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid var(--bdr)">
-            <span style="color:var(--text2)">${i.label}</span>
-            <span style="font-weight:700; color:var(--red)">${i.value || 0}€</span>
-        </div>`).join('');
 }
 </script>
 </body>
