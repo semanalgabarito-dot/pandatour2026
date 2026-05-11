@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+python3 << 'PYEOF'
+html = """<!DOCTYPE html>
 <html lang="pt">
 <head>
 <meta charset="UTF-8">
@@ -7,7 +8,7 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0a;color:#e8e8e8;font-size:13px}
-:root{--gold:#C9A84C;--gold2:#E8C96A;--gold3:#F5E6B0;--dark:#0a0a0a;--dark2:#111;--dark3:#1a1a1a;--dark4:#242424;--bdr:#2a2a2a;--bdr2:#333;--red:#E24B4A;--green:#1D9E75;--green2:#0F6E56;--blue:#4285F4;--pur:#7C6FCD;--text:#e8e8e8;--text2:#aaa;--text3:#666}
+:root{--gold:#C9A84C;--gold2:#E8C96A;--dark:#0a0a0a;--dark2:#111;--dark3:#1a1a1a;--dark4:#242424;--bdr:#2a2a2a;--bdr2:#333;--red:#E24B4A;--green:#1D9E75;--blue:#4285F4;--pur:#7C6FCD;--text:#e8e8e8;--text2:#aaa;--text3:#666}
 .topbar{background:#111;border-bottom:1px solid var(--bdr);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;position:sticky;top:0;z-index:20;box-shadow:0 2px 12px rgba(0,0,0,.6)}
 .logo-img{height:36px;width:auto}
 .tabs{display:flex;gap:2px;background:#1a1a1a;border-radius:8px;padding:3px;flex-wrap:wrap;border:1px solid var(--bdr)}
@@ -23,7 +24,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .card:hover{border-color:var(--gold)}
 .card-label{font-size:9px;color:var(--text3);margin-bottom:3px;text-transform:uppercase;letter-spacing:.6px;font-weight:600}
 .card-value{font-size:18px;font-weight:700}
-.gold{color:var(--gold)}.green{color:#2ECC71}.red{color:var(--red)}.amb{color:var(--gold)}.pur{color:var(--pur)}.blue{color:var(--blue)}
+.green{color:#2ECC71}.red{color:var(--red)}.amb{color:var(--gold)}.blue{color:var(--blue)}
 .stitle{font-size:13px;font-weight:700;margin:.9rem 0 .5rem;color:var(--gold);display:flex;align-items:center;gap:6px;text-transform:uppercase;letter-spacing:.5px}
 .fw{background:var(--dark3);border:1px solid var(--bdr2);border-radius:10px;padding:12px;margin-bottom:.9rem}
 .fr{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:6px;margin-bottom:6px}
@@ -53,7 +54,6 @@ tr:hover td{background:rgba(201,168,76,.04)}
 .badge{display:inline-block;padding:2px 6px;border-radius:6px;font-size:9px;font-weight:700;cursor:pointer;white-space:nowrap;letter-spacing:.3px}
 .b-pago{background:#0d2a1a;color:#2ECC71;border:1px solid #1a4d2e}
 .b-falta{background:#2a0d0d;color:var(--red);border:1px solid #4d1a1a}
-.b-parcial{background:#2a1f0d;color:var(--gold);border:1px solid #4d3a1a}
 .b-link{background:#0d1a3d;color:#7ab3ff;border:1px solid #1a2a5a}
 .b-sumup{background:#2a0d1a;color:#ff6b9d;border:1px solid #4d1a2a}
 .b-mbway{background:#1a0d2a;color:var(--pur);border:1px solid #2a1a4d}
@@ -73,7 +73,6 @@ tr:hover td{background:rgba(201,168,76,.04)}
 .fc h3{font-size:9px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.6px;margin-bottom:10px}
 .sr{display:flex;justify-content:space-between;padding:4px 0;font-size:11px;border-bottom:1px solid var(--bdr);color:var(--text2);align-items:center}
 .sr:last-child{border-bottom:none;font-weight:700;font-size:12px;color:var(--text);padding-top:6px}
-.sr.head{background:var(--dark4);border-radius:4px;padding:4px 6px;margin:2px 0;font-weight:700;font-size:10px;color:var(--text)}
 .modal-bg{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.85);z-index:100;align-items:flex-start;justify-content:center;padding-top:40px;overflow-y:auto}
 .modal-bg.open{display:flex}
 .modal{background:var(--dark3);border:1px solid var(--bdr2);border-radius:12px;padding:1.25rem;width:95%;max-width:620px;box-shadow:0 20px 60px rgba(0,0,0,.9)}
@@ -86,6 +85,7 @@ tr:hover td{background:rgba(201,168,76,.04)}
 .anual-table td:first-child{text-align:left;font-weight:700;color:var(--gold);background:var(--dark2)}
 .anual-table tr:last-child td{background:#0d1f0d;font-weight:700;color:var(--text)}
 .anual-table .pos{color:#2ECC71}.anual-table .neg{color:var(--red)}
+.anual-table input[type=number]{width:72px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.3);border-radius:3px;padding:2px 4px;font-size:10px;color:var(--text);text-align:right;font-family:inherit}
 .desp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:6px;margin-bottom:.75rem}
 .desp-item{background:var(--dark3);border:1px solid var(--bdr2);border-radius:7px;padding:9px}
 .desp-item label{font-size:9px;color:var(--gold);text-transform:uppercase;letter-spacing:.4px;display:block;margin-bottom:3px;font-weight:700}
@@ -94,7 +94,8 @@ tr:hover td{background:rgba(201,168,76,.04)}
 .pr-item:last-child{border-bottom:none}
 #upload-area{border:2px dashed var(--bdr2)!important;background:var(--dark4)!important;transition:all .2s}
 #upload-area:hover{border-color:var(--gold)!important;background:rgba(201,168,76,.04)!important}
-#file-preview{background:#0d1f0d!important;color:#2ECC71!important}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spinning{display:inline-block;animation:spin .7s linear infinite}
 ::-webkit-scrollbar{width:5px;height:5px}
 ::-webkit-scrollbar-track{background:var(--dark2)}
 ::-webkit-scrollbar-thumb{background:var(--bdr2);border-radius:3px}
@@ -104,10 +105,10 @@ tr:hover td{background:rgba(201,168,76,.04)}
 </head>
 <body>
 
-<!-- LOGIN -->
 <div id="login-view" class="ls">
   <div class="lc">
-    <img src="https://semanalgabarito-dot.github.io/pandatour2026/LOGOSEMFUNDO.png" style="width:160px;margin-bottom:1.25rem" alt="PandaTour"><h1>GESTÃO 2026</h1>
+    <img src="https://semanalgabarito-dot.github.io/pandatour2026/LOGOSEMFUNDO.png" style="width:160px;margin-bottom:1.25rem" alt="PandaTour">
+    <h1>GESTAO 2026</h1>
     <button class="gbtn" onclick="doLogin()">
       <svg width="16" height="16" viewBox="0 0 18 18"><path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615z" fill="#fff"/><path d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 0 0 9 18z" fill="#fff"/><path d="M3.964 10.71A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.042l3.007-2.332z" fill="#fff"/><path d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.958L3.964 6.29C4.672 4.163 6.656 3.58 9 3.58z" fill="#fff"/></svg>
       Entrar com Google
@@ -116,21 +117,22 @@ tr:hover td{background:rgba(201,168,76,.04)}
   </div>
 </div>
 
-<!-- APP -->
 <div id="app-view" style="display:none">
   <div class="topbar">
     <img src="https://semanalgabarito-dot.github.io/pandatour2026/LOGOSEMFUNDO.png" class="logo-img" alt="PandaTour">
     <div class="tabs">
-      <button class="tab active" onclick="showPanel('servicos',this)">📋 Serviços</button>
-      <button class="tab" onclick="showPanel('vouchers',this)">📩 Vouchers</button>
-      <button class="tab" onclick="showPanel('financeiro',this)">💰 Financeiro</button>
-      <button class="tab" onclick="showPanel('anual',this)">📊 Anual</button>
-      <button class="tab" onclick="showPanel('despesas',this)">💸 Despesas</button>
-      <button class="tab" onclick="showPanel('equipa',this)">👥 Equipa</button>
+      <button class="tab active" onclick="showPanel('servicos',this)">&#128203; Servicos</button>
+      <button class="tab" onclick="showPanel('vouchers',this)">&#128233; Vouchers</button>
+      <button class="tab" onclick="showPanel('financeiro',this)">&#128176; Financeiro</button>
+      <button class="tab" onclick="showPanel('anual',this)">&#128202; Anual</button>
+      <button class="tab" onclick="showPanel('despesas',this)">&#128184; Despesas</button>
+      <button class="tab" onclick="showPanel('equipa',this)">&#128101; Equipa</button>
     </div>
     <div class="user-bar">
       <img id="user-avatar" class="avatar" src="" alt="" style="display:none">
       <span id="user-name"></span>
+      <span id="last-sync" style="font-size:10px;color:#555;white-space:nowrap"></span>
+      <button class="btn sm" id="btn-refresh" onclick="manualRefresh()" title="Recarregar dados do Google Sheets">&#8635; Sync</button>
       <button class="btn sm" onclick="doLogout()">Sair</button>
     </div>
   </div>
@@ -138,62 +140,47 @@ tr:hover td{background:rgba(201,168,76,.04)}
   <div class="main">
     <div id="sync-bar" class="sync" style="display:none">
       <span id="sync-msg"></span>
-      <button class="btn sm" onclick="loadData()">↻</button>
     </div>
 
-    <!-- ===== SERVIÇOS ===== -->
+    <!-- SERVICOS -->
     <div class="panel active" id="panel-servicos">
       <div class="cards" id="cards-resumo"></div>
-      <div class="stitle">Adicionar serviço</div>
+      <div class="stitle">Adicionar servico</div>
       <div class="fw">
         <div class="fr">
           <div class="fg"><label>Data</label><input type="date" id="f-data"></div>
           <div class="fg"><label>Hora</label><input type="time" id="f-hora"></div>
-          <div class="fg"><label>Tipo</label>
-            <select id="f-tipo"><option>Transfer IN</option><option>Transfer OUT</option><option>Tour</option><option>Meet &amp; Greet</option><option>Guia</option><option>Outros</option></select>
-          </div>
-          <div class="fg"><label>Origem serviço</label>
-            <select id="f-src"><option>Agência</option><option>Carla</option><option>Ponto Reflexo</option><option>Site</option><option>WhatsApp</option><option>Parceiro Externo</option><option>Uber</option><option>Bolt</option></select>
-          </div>
-          <div class="fg"><label>Agência / Cliente</label><input type="text" id="f-agencia" placeholder="Ex: APEXTION DMC"></div>
+          <div class="fg"><label>Tipo</label><select id="f-tipo"><option>Transfer IN</option><option>Transfer OUT</option><option>Tour</option><option>Meet &amp; Greet</option><option>Guia</option><option>Outros</option></select></div>
+          <div class="fg"><label>Origem</label><select id="f-src"><option>Agencia</option><option>Carla</option><option>Ponto Reflexo</option><option>Site</option><option>WhatsApp</option><option>Parceiro Externo</option><option>Uber</option><option>Bolt</option></select></div>
+          <div class="fg"><label>Agencia / Cliente</label><input type="text" id="f-agencia" placeholder="Ex: APEXTION DMC"></div>
         </div>
         <div class="fr">
-          <div class="fg"><label>🛫 Saída</label>
-            <select id="f-saida"><option value="">— selecionar —</option><option>Aeroporto Lisboa</option><option>Hotel</option><option>Terminal Cruzeiros</option><option>Oriente Train Station</option><option>Santa Apolónia</option><option>Outro / Morada</option></select>
-          </div>
-          <div class="fg"><label>Saída livre (Airbnb/morada)</label><input type="text" id="f-saida-livre" placeholder="só se 'Outro' acima"></div>
-          <div class="fg"><label>🏨 Destino</label><input type="text" id="f-destino" placeholder="Ex: Hotel Borges Chiado"></div>
-          <div class="fg"><label>Nº Voo / Ref / Pax</label><input type="text" id="f-voo" placeholder="Ex: FR3683 / 2pax"></div>
+          <div class="fg"><label>Saida</label><select id="f-saida"><option value="">selecionar</option><option>Aeroporto Lisboa</option><option>Hotel</option><option>Terminal Cruzeiros</option><option>Oriente Train Station</option><option>Santa Apolonia</option><option>Outro / Morada</option></select></div>
+          <div class="fg"><label>Saida livre</label><input type="text" id="f-saida-livre" placeholder="morada/Airbnb"></div>
+          <div class="fg"><label>Destino</label><input type="text" id="f-destino" placeholder="Ex: Hotel Borges Chiado"></div>
+          <div class="fg"><label>Voo / Ref / Pax</label><input type="text" id="f-voo" placeholder="Ex: FR3683 / 2pax"></div>
           <div class="fg"><label>Motorista</label><select id="f-motorista"></select></div>
-          <div class="fg"><label>Guia (opcional)</label><select id="f-guia"><option value="">— nenhum —</option></select></div>
+          <div class="fg"><label>Guia</label><select id="f-guia"><option value="">nenhum</option></select></div>
         </div>
         <div class="fr">
-          <div class="fg"><label>Valor PandaTour €</label><input type="number" id="f-valor" step="0.01" min="0" placeholder="0.00" oninput="calcMargem('f')"></div>
-          <div class="fg"><label>Valor Parceiro €</label><input type="number" id="f-parceiro" step="0.01" min="0" placeholder="0.00" oninput="calcMargem('f')"></div>
-          <div class="fg"><label>Comissão Carla €</label>
-            <select id="f-comissao" onchange="calcMargem('f')"><option value="0">0€</option><option value="7">7€</option><option value="8">8€</option><option value="10">10€</option><option value="15">15€</option></select>
-          </div>
-          <div class="fg"><label>% Pago pelo cliente</label>
-            <select id="f-pct" onchange="togglePctCustom();calcMargem('f')"><option value="100">100%</option><option value="50">50%</option><option value="25">25%</option><option value="0">0% (crédito)</option><option value="custom">Outro %</option></select>
-          </div>
-          <div class="fg" id="fg-pct-custom" style="display:none"><label>% exacto</label><input type="number" id="f-pct-val" min="0" max="100" placeholder="ex:75" oninput="calcMargem('f')"></div>
-          <div class="fg"><label>Margem estimada</label><div id="f-margem" style="font-size:14px;font-weight:700;padding:5px 0">—</div></div>
+          <div class="fg"><label>Valor PandaTour EUR</label><input type="number" id="f-valor" step="0.01" min="0" placeholder="0.00" oninput="calcMargem('f')"></div>
+          <div class="fg"><label>Valor Parceiro EUR</label><input type="number" id="f-parceiro" step="0.01" min="0" placeholder="0.00" oninput="calcMargem('f')"></div>
+          <div class="fg"><label>Comissao Carla EUR</label><select id="f-comissao" onchange="calcMargem('f')"><option value="0">0</option><option value="7">7</option><option value="8">8</option><option value="10">10</option><option value="15">15</option></select></div>
+          <div class="fg"><label>% Pago</label><select id="f-pct" onchange="togglePctCustom();calcMargem('f')"><option value="100">100%</option><option value="50">50%</option><option value="25">25%</option><option value="0">0%</option><option value="custom">Outro %</option></select></div>
+          <div class="fg" id="fg-pct-custom" style="display:none"><label>% exacto</label><input type="number" id="f-pct-val" min="0" max="100" placeholder="75" oninput="calcMargem('f')"></div>
+          <div class="fg"><label>Margem</label><div id="f-margem" style="font-size:14px;font-weight:700;padding:5px 0">-</div></div>
         </div>
         <div class="fr">
-          <div class="fg"><label>Voucher €</label><input type="number" id="f-voucher" step="0.01" min="0" placeholder="0.00"></div>
-          <div class="fg"><label>Tip €</label><input type="number" id="f-tip" step="0.01" min="0" placeholder="0.00"></div>
-          <div class="fg"><label>Forma Pagamento</label>
-            <select id="f-pago"><option>Pago</option><option>Falta</option><option>MB Way</option><option>Link</option><option>SumUp</option><option>Voucher</option><option>Crédito Carla</option><option>Crédito P.Reflexo</option></select>
-          </div>
-          <div class="fg"><label>Notas</label><input type="text" id="f-notas" placeholder="Observações..."></div>
+          <div class="fg"><label>Voucher EUR</label><input type="number" id="f-voucher" step="0.01" min="0" placeholder="0.00"></div>
+          <div class="fg"><label>Tip EUR</label><input type="number" id="f-tip" step="0.01" min="0" placeholder="0.00"></div>
+          <div class="fg"><label>Pagamento</label><select id="f-pago"><option>Pago</option><option>Falta</option><option>MB Way</option><option>Link</option><option>SumUp</option><option>Voucher</option><option>Credito Carla</option><option>Credito P.Reflexo</option></select></div>
+          <div class="fg"><label>Notas</label><input type="text" id="f-notas" placeholder="Observacoes..."></div>
         </div>
         <div style="display:flex;gap:6px;flex-wrap:wrap">
           <button class="btn primary" onclick="addServico()">+ Adicionar e guardar</button>
           <button class="btn" onclick="clearForm('f')">Limpar</button>
         </div>
       </div>
-
-      <!-- Filtros -->
       <div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:.6rem;align-items:center">
         <select id="fil-mes" onchange="renderTable()" style="padding:4px 6px;border:1px solid var(--bdr);border-radius:5px;font-size:10px">
           <option value="">Todos meses</option>
@@ -203,68 +190,59 @@ tr:hover td{background:rgba(201,168,76,.04)}
         </select>
         <select id="fil-motorista" onchange="renderTable()" style="padding:4px 6px;border:1px solid var(--bdr);border-radius:5px;font-size:10px"><option value="">Todos motoristas</option></select>
         <select id="fil-src" onchange="renderTable()" style="padding:4px 6px;border:1px solid var(--bdr);border-radius:5px;font-size:10px">
-          <option value="">Todas origens</option><option>Agência</option><option>Carla</option><option>Ponto Reflexo</option><option>Site</option><option>WhatsApp</option><option>Parceiro Externo</option><option>Uber</option><option>Bolt</option>
+          <option value="">Todas origens</option><option>Agencia</option><option>Carla</option><option>Ponto Reflexo</option><option>Site</option><option>WhatsApp</option><option>Parceiro Externo</option><option>Uber</option><option>Bolt</option>
         </select>
         <select id="fil-pago" onchange="renderTable()" style="padding:4px 6px;border:1px solid var(--bdr);border-radius:5px;font-size:10px"><option value="">Todos estados</option><option>Pago</option><option>Falta</option></select>
         <input id="fil-search" type="text" placeholder="Pesquisar..." oninput="renderTable()" style="padding:4px 6px;border:1px solid var(--bdr);border-radius:5px;font-size:10px;min-width:90px">
-        <button class="btn blue sm" onclick="exportCalSelected()">📅 → Cal</button>
+        <button class="btn blue sm" onclick="exportCalSelected()">Cal</button>
       </div>
-
       <div class="tw">
         <table>
           <thead><tr>
             <th><input type="checkbox" id="chk-all" onchange="toggleAll(this)"></th>
-            <th>Data</th><th>Hora</th><th>Tipo</th><th>Origem</th><th>Agência/Cliente</th>
-            <th>Saída → Destino</th><th>Voo/Ref</th><th>Motorista</th><th>Guia</th>
-            <th>Panda €</th><th>Parceiro €</th><th>Margem €</th><th>Comis €</th>
-            <th>% Pago</th><th>Recebido €</th><th>Em Falta €</th>
-            <th>Vch €</th><th>Tip €</th><th>Estado</th><th>Cal</th><th>✏️</th><th>🗑️</th>
+            <th>Data</th><th>Hora</th><th>Tipo</th><th>Origem</th><th>Agencia/Cliente</th>
+            <th>Saida Destino</th><th>Voo/Ref</th><th>Motorista</th><th>Guia</th>
+            <th>Panda EUR</th><th>Parceiro EUR</th><th>Margem EUR</th><th>Comis EUR</th>
+            <th>% Pago</th><th>Recebido EUR</th><th>Em Falta EUR</th>
+            <th>Vch EUR</th><th>Tip EUR</th><th>Estado</th><th>Cal</th><th>Edit</th><th>Del</th>
           </tr></thead>
           <tbody id="tbody"></tbody>
         </table>
       </div>
-      <div id="empty-msg" style="text-align:center;padding:2rem;color:#999;font-size:12px;display:none">Sem serviços. Adiciona o primeiro acima.</div>
+      <div id="empty-msg" style="text-align:center;padding:2rem;color:#999;font-size:12px;display:none">Sem servicos.</div>
     </div>
 
-    <!-- ===== VOUCHERS ===== -->
+    <!-- VOUCHERS -->
     <div class="panel" id="panel-vouchers">
-      <div class="stitle">🤖 Ler voucher com IA (PDF, imagem ou texto)</div>
-      <div class="fw" style="border:2px dashed var(--g);background:#f9fffc">
-        <p style="font-size:11px;color:#555;margin-bottom:10px">Faz <strong>upload de PDF ou imagem</strong> do voucher, ou cola texto — a IA extrai tudo automaticamente.</p>
-
-        <!-- Upload area -->
-        <div id="upload-area" style="border:2px dashed var(--bdr);border-radius:8px;padding:20px;text-align:center;cursor:pointer;margin-bottom:8px;transition:all .2s;background:#fff"
+      <div class="stitle">Ler voucher com IA</div>
+      <div class="fw">
+        <p style="font-size:11px;color:#888;margin-bottom:10px">Faz upload de PDF ou imagem do voucher, ou cola texto.</p>
+        <div id="upload-area" style="border:2px dashed var(--bdr);border-radius:8px;padding:20px;text-align:center;cursor:pointer;margin-bottom:8px"
           onclick="e('file-input').click()"
-          ondragover="event.preventDefault();this.style.borderColor='var(--g)'"
-          ondragleave="this.style.borderColor='var(--bdr)'"
+          ondragover="event.preventDefault();this.style.borderColor='var(--gold)'"
+          ondragleave="this.style.borderColor='var(--bdr2)'"
           ondrop="handleDrop(event)">
-          <div style="font-size:28px;margin-bottom:6px">📄</div>
+          <div style="font-size:28px;margin-bottom:6px">&#128196;</div>
           <div style="font-size:12px;color:#666">Clica aqui ou arrasta o ficheiro</div>
           <div style="font-size:10px;color:#999;margin-top:3px">PDF, PNG, JPG, JPEG (max 10MB)</div>
           <input type="file" id="file-input" accept=".pdf,.png,.jpg,.jpeg" style="display:none" onchange="handleFileSelect(this)">
         </div>
-        <div id="file-preview" style="display:none;margin-bottom:8px;padding:8px;background:#f0fff8;border-radius:6px;font-size:11px;color:var(--g2)"></div>
-
-        <!-- OR text -->
+        <div id="file-preview" style="display:none;margin-bottom:8px;padding:8px;background:#0d1f0d;border-radius:6px;font-size:11px;color:#2ECC71"></div>
         <div style="display:flex;align-items:center;gap:8px;margin:8px 0">
           <div style="flex:1;height:1px;background:var(--bdr)"></div>
           <span style="font-size:10px;color:#999">OU cola texto</span>
           <div style="flex:1;height:1px;background:var(--bdr)"></div>
         </div>
-
         <div class="fg" style="margin-bottom:8px">
           <textarea id="paste-text" rows="4" placeholder="Cola aqui o texto do voucher, WhatsApp ou email..."></textarea>
         </div>
-
         <div style="display:flex;gap:6px;flex-wrap:wrap">
-          <button class="btn primary" onclick="analyzeWithAI()" id="btn-ai">🤖 Analisar com IA</button>
-          <button class="btn" onclick="parseVoucher()">🪄 Interpretar (rápido)</button>
-          <button class="btn" onclick="clearVoucherForm()">🗑️ Limpar</button>
+          <button class="btn primary" onclick="analyzeWithAI()" id="btn-ai">IA Analisar com IA</button>
+          <button class="btn" onclick="parseVoucher()">Interpretar rapido</button>
+          <button class="btn" onclick="clearVoucherForm()">Limpar</button>
         </div>
         <div id="parse-result" style="margin-top:8px;font-size:11px"></div>
-        <div id="ai-loading" style="display:none;margin-top:8px;font-size:11px;color:var(--g2)">
-          <span id="ai-loading-text">🤖 A analisar com IA...</span>
-        </div>
+        <div id="ai-loading" style="display:none;margin-top:8px;font-size:11px;color:#2ECC71">A analisar com IA...</div>
       </div>
       <div class="stitle">Confirmar e guardar</div>
       <div class="fw">
@@ -272,94 +250,88 @@ tr:hover td{background:rgba(201,168,76,.04)}
           <div class="fg"><label>Data</label><input type="date" id="vf-data"></div>
           <div class="fg"><label>Hora</label><input type="time" id="vf-hora"></div>
           <div class="fg"><label>Tipo</label><select id="vf-tipo"><option>Transfer IN</option><option>Transfer OUT</option><option>Tour</option><option>Meet &amp; Greet</option><option>Guia</option><option>Outros</option></select></div>
-          <div class="fg"><label>Origem</label><select id="vf-src"><option>Agência</option><option>Carla</option><option>Ponto Reflexo</option><option>Site</option><option>WhatsApp</option><option>Parceiro Externo</option></select></div>
-          <div class="fg"><label>Agência/Cliente</label><input type="text" id="vf-agencia"></div>
+          <div class="fg"><label>Origem</label><select id="vf-src"><option>Agencia</option><option>Carla</option><option>Ponto Reflexo</option><option>Site</option><option>WhatsApp</option><option>Parceiro Externo</option></select></div>
+          <div class="fg"><label>Agencia/Cliente</label><input type="text" id="vf-agencia"></div>
         </div>
         <div class="fr">
-          <div class="fg"><label>🛫 Saída</label><select id="vf-saida"><option value="">—</option><option>Aeroporto Lisboa</option><option>Hotel</option><option>Terminal Cruzeiros</option><option>Oriente Train Station</option><option>Santa Apolónia</option><option>Outro / Morada</option></select></div>
-          <div class="fg"><label>Saída livre</label><input type="text" id="vf-saida-livre" placeholder="morada/Airbnb"></div>
-          <div class="fg"><label>🏨 Destino</label><input type="text" id="vf-destino"></div>
+          <div class="fg"><label>Saida</label><select id="vf-saida"><option value="">-</option><option>Aeroporto Lisboa</option><option>Hotel</option><option>Terminal Cruzeiros</option><option>Oriente Train Station</option><option>Santa Apolonia</option><option>Outro / Morada</option></select></div>
+          <div class="fg"><label>Saida livre</label><input type="text" id="vf-saida-livre" placeholder="morada/Airbnb"></div>
+          <div class="fg"><label>Destino</label><input type="text" id="vf-destino"></div>
           <div class="fg"><label>Voo / Ref</label><input type="text" id="vf-voo"></div>
           <div class="fg"><label>Motorista</label><select id="vf-motorista"></select></div>
-          <div class="fg"><label>Guia</label><select id="vf-guia"><option value="">— nenhum —</option></select></div>
+          <div class="fg"><label>Guia</label><select id="vf-guia"><option value="">nenhum</option></select></div>
         </div>
         <div class="fr">
-          <div class="fg"><label>Valor Panda €</label><input type="number" id="vf-valor" step="0.01" min="0"></div>
-          <div class="fg"><label>Valor Parceiro €</label><input type="number" id="vf-parceiro" step="0.01" min="0"></div>
-          <div class="fg"><label>Comissão Carla €</label><select id="vf-comissao"><option value="0">0€</option><option value="7">7€</option><option value="8">8€</option><option value="10">10€</option><option value="15">15€</option></select></div>
+          <div class="fg"><label>Valor Panda EUR</label><input type="number" id="vf-valor" step="0.01" min="0"></div>
+          <div class="fg"><label>Valor Parceiro EUR</label><input type="number" id="vf-parceiro" step="0.01" min="0"></div>
+          <div class="fg"><label>Comissao Carla EUR</label><select id="vf-comissao"><option value="0">0</option><option value="7">7</option><option value="8">8</option><option value="10">10</option><option value="15">15</option></select></div>
           <div class="fg"><label>% Pago</label><select id="vf-pct"><option value="100">100%</option><option value="50">50%</option><option value="0">0%</option></select></div>
-          <div class="fg"><label>Voucher €</label><input type="number" id="vf-voucher" step="0.01" min="0"></div>
-          <div class="fg"><label>Tip €</label><input type="number" id="vf-tip" step="0.01" min="0"></div>
-          <div class="fg"><label>Pagamento</label><select id="vf-pago"><option>Pago</option><option>Falta</option><option>MB Way</option><option>Link</option><option>SumUp</option><option>Voucher</option><option>Crédito Carla</option><option>Crédito P.Reflexo</option></select></div>
+          <div class="fg"><label>Voucher EUR</label><input type="number" id="vf-voucher" step="0.01" min="0"></div>
+          <div class="fg"><label>Tip EUR</label><input type="number" id="vf-tip" step="0.01" min="0"></div>
+          <div class="fg"><label>Pagamento</label><select id="vf-pago"><option>Pago</option><option>Falta</option><option>MB Way</option><option>Link</option><option>SumUp</option><option>Voucher</option><option>Credito Carla</option><option>Credito P.Reflexo</option></select></div>
           <div class="fg"><label>Notas</label><input type="text" id="vf-notas"></div>
         </div>
-        <button class="btn primary" onclick="addServicoVoucher()">+ Guardar serviço</button>
+        <button class="btn primary" onclick="addServicoVoucher()">+ Guardar servico</button>
       </div>
-
-      <!-- Ponto Reflexo -->
-      <div class="stitle">🔄 Ponto Reflexo — Gestão de Pagamentos</div>
+      <div class="stitle">Ponto Reflexo - Gestao de Pagamentos</div>
       <div class="fw">
-        <p style="font-size:11px;color:#888;margin-bottom:8px">Serviços Ponto Reflexo pagos dia 15 e 30 de cada mês. Preço fixo sugerido: 27,50€</p>
+        <p style="font-size:11px;color:#888;margin-bottom:8px">Pagamentos dia 15 e 30. Preco fixo sugerido: 27,50</p>
         <div id="pr-lista"></div>
         <div style="margin-top:8px;font-size:11px;color:#666" id="pr-resumo"></div>
       </div>
     </div>
 
-    <!-- ===== FINANCEIRO ===== -->
+    <!-- FINANCEIRO -->
     <div class="panel" id="panel-financeiro">
       <div class="cards" id="cards-fin"></div>
-
       <div class="stitle">Em falta por origem</div>
       <div class="fw" id="fin-falta-src"></div>
-
-      <div class="stitle">💳 Carla — Resumo mensal</div>
+      <div class="stitle">Carla - Resumo mensal (CARLA EUR | CARLA VCH | CARLA % | LIQUIDO)</div>
       <div class="fw" id="fin-carla"></div>
-
       <div class="fgrid">
-        <div class="fc"><h3>Por mês</h3><div id="fin-mes"></div></div>
+        <div class="fc"><h3>Por mes</h3><div id="fin-mes"></div></div>
         <div class="fc"><h3>Por motorista</h3><div id="fin-driver"></div></div>
       </div>
-
       <div class="fc" style="margin-bottom:.75rem">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-          <h3 style="margin:0">Dívida Paulo 2026</h3>
-          <button class="btn sm" onclick="loadPauloDebt().then(renderFinanceiro)">↻</button>
+          <h3 style="margin:0">Divida Paulo 2026</h3>
+          <button class="btn sm" onclick="loadPauloDebt().then(renderFinanceiro)">Refresh</button>
         </div>
         <div id="fin-paulo"></div>
       </div>
     </div>
 
-    <!-- ===== ANUAL ===== -->
+    <!-- ANUAL -->
     <div class="panel" id="panel-anual">
-      <div class="stitle">📊 Resumo Anual 2026
-        <button class="btn sm primary" onclick="saveAnual()">💾 Guardar</button>
-        <button class="btn sm" onclick="loadAnual()">↻ Carregar</button>
+      <div class="stitle">Resumo Anual 2026
+        <button class="btn sm primary" onclick="saveAnual()">Guardar</button>
+        <button class="btn sm" onclick="loadAnual().then(renderAnual)">Carregar</button>
       </div>
-      <p style="font-size:11px;color:#888;margin-bottom:.75rem">Alguns campos são calculados automaticamente dos serviços. Outros podes editar diretamente (Uber, Bolt, etc.).</p>
+      <p style="font-size:11px;color:#888;margin-bottom:.75rem">Calculado dos servicos. Edita Uber, Bolt e PdTour-Dados diretamente (campos com borda dourada).</p>
       <div class="tw"><table class="anual-table" id="anual-table"></table></div>
       <div class="cards" id="cards-anual" style="margin-top:.75rem"></div>
     </div>
 
-    <!-- ===== DESPESAS ===== -->
+    <!-- DESPESAS -->
     <div class="panel" id="panel-despesas">
-      <div class="stitle">💸 Despesas mensais
+      <div class="stitle">Despesas mensais
         <select id="desp-mes" onchange="renderDespesas()" style="font-size:11px;padding:3px 6px;border:1px solid var(--bdr);border-radius:5px">
-          <option value="01">Janeiro</option><option value="02">Fevereiro</option><option value="03">Março</option>
+          <option value="01">Janeiro</option><option value="02">Fevereiro</option><option value="03">Marco</option>
           <option value="04">Abril</option><option value="05">Maio</option><option value="06">Junho</option>
           <option value="07">Julho</option><option value="08">Agosto</option><option value="09">Setembro</option>
           <option value="10">Outubro</option><option value="11">Novembro</option><option value="12">Dezembro</option>
         </select>
-        <button class="btn sm primary" onclick="saveDespesas()">💾 Guardar</button>
+        <button class="btn sm primary" onclick="saveDespesas()">Guardar</button>
       </div>
       <div class="desp-grid" id="desp-grid"></div>
       <div class="fw">
-        <div class="sr"><span style="font-weight:700">Total despesas este mês</span><span class="red" style="font-weight:700;font-size:13px" id="desp-total">€0.00</span></div>
+        <div class="sr"><span style="font-weight:700">Total despesas este mes</span><span class="red" style="font-weight:700;font-size:13px" id="desp-total">0.00</span></div>
       </div>
     </div>
 
-    <!-- ===== EQUIPA ===== -->
+    <!-- EQUIPA -->
     <div class="panel" id="panel-equipa">
-      <div class="stitle">🚗 Motoristas</div>
+      <div class="stitle">Motoristas</div>
       <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:.6rem" id="legend-motoristas"></div>
       <div style="display:flex;gap:6px;align-items:flex-end;margin-bottom:.75rem;flex-wrap:wrap">
         <div class="fg"><label>Nome</label><input type="text" id="new-mot" placeholder="Nome" style="width:130px"></div>
@@ -367,10 +339,10 @@ tr:hover td{background:rgba(201,168,76,.04)}
         <button class="btn primary sm" onclick="addMotorista()">+ Motorista</button>
       </div>
       <div class="tw" style="margin-bottom:1rem">
-        <table><thead><tr><th>Motorista</th><th>Serviços</th><th>Recebe €</th><th>Paga parcs €</th><th>Margem €</th><th>Pagos</th><th>Em falta</th><th></th></tr></thead>
+        <table><thead><tr><th>Motorista</th><th>Servicos</th><th>Recebe EUR</th><th>Paga parcs EUR</th><th>Margem EUR</th><th>Pagos</th><th>Em falta</th><th></th></tr></thead>
         <tbody id="tbody-motoristas"></tbody></table>
       </div>
-      <div class="stitle">🎤 Guias</div>
+      <div class="stitle">Guias</div>
       <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:.6rem" id="legend-guias"></div>
       <div style="display:flex;gap:6px;align-items:flex-end;margin-bottom:.75rem;flex-wrap:wrap">
         <div class="fg"><label>Nome</label><input type="text" id="new-gui" placeholder="Nome" style="width:130px"></div>
@@ -378,7 +350,7 @@ tr:hover td{background:rgba(201,168,76,.04)}
         <button class="btn pur sm" onclick="addGuia()">+ Guia</button>
       </div>
       <div class="tw">
-        <table><thead><tr><th>Guia</th><th>Serviços</th><th>Pago €</th><th></th></tr></thead>
+        <table><thead><tr><th>Guia</th><th>Servicos</th><th>Pago EUR</th><th></th></tr></thead>
         <tbody id="tbody-guias"></tbody></table>
       </div>
     </div>
@@ -389,38 +361,38 @@ tr:hover td{background:rgba(201,168,76,.04)}
 <div class="modal-bg" id="modal-bg">
   <div class="modal">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.75rem">
-      <h2>✏️ Editar serviço</h2>
-      <button class="btn sm" onclick="closeModal()">✕</button>
+      <h2>Editar servico</h2>
+      <button class="btn sm" onclick="closeModal()">X</button>
     </div>
     <div class="fr">
       <div class="fg"><label>Data</label><input type="date" id="e-data"></div>
       <div class="fg"><label>Hora</label><input type="time" id="e-hora"></div>
       <div class="fg"><label>Tipo</label><select id="e-tipo"><option>Transfer IN</option><option>Transfer OUT</option><option>Tour</option><option>Meet &amp; Greet</option><option>Guia</option><option>Outros</option></select></div>
-      <div class="fg"><label>Origem</label><select id="e-src"><option>Agência</option><option>Carla</option><option>Ponto Reflexo</option><option>Site</option><option>WhatsApp</option><option>Parceiro Externo</option><option>Uber</option><option>Bolt</option></select></div>
+      <div class="fg"><label>Origem</label><select id="e-src"><option>Agencia</option><option>Carla</option><option>Ponto Reflexo</option><option>Site</option><option>WhatsApp</option><option>Parceiro Externo</option><option>Uber</option><option>Bolt</option></select></div>
     </div>
     <div class="fr">
-      <div class="fg"><label>Agência/Cliente</label><input type="text" id="e-agencia"></div>
-      <div class="fg"><label>Saída</label><select id="e-saida"><option value="">—</option><option>Aeroporto Lisboa</option><option>Hotel</option><option>Terminal Cruzeiros</option><option>Oriente Train Station</option><option>Santa Apolónia</option><option>Outro / Morada</option></select></div>
-      <div class="fg"><label>Saída livre</label><input type="text" id="e-saida-livre"></div>
+      <div class="fg"><label>Agencia/Cliente</label><input type="text" id="e-agencia"></div>
+      <div class="fg"><label>Saida</label><select id="e-saida"><option value="">-</option><option>Aeroporto Lisboa</option><option>Hotel</option><option>Terminal Cruzeiros</option><option>Oriente Train Station</option><option>Santa Apolonia</option><option>Outro / Morada</option></select></div>
+      <div class="fg"><label>Saida livre</label><input type="text" id="e-saida-livre"></div>
       <div class="fg"><label>Destino</label><input type="text" id="e-destino"></div>
       <div class="fg"><label>Voo / Ref</label><input type="text" id="e-voo"></div>
     </div>
     <div class="fr">
       <div class="fg"><label>Motorista</label><select id="e-motorista"></select></div>
-      <div class="fg"><label>Guia</label><select id="e-guia"><option value="">— nenhum —</option></select></div>
-      <div class="fg"><label>Valor Panda €</label><input type="number" id="e-valor" step="0.01" min="0"></div>
-      <div class="fg"><label>Valor Parceiro €</label><input type="number" id="e-parceiro" step="0.01" min="0"></div>
-      <div class="fg"><label>Comissão Carla €</label><select id="e-comissao"><option value="0">0€</option><option value="7">7€</option><option value="8">8€</option><option value="10">10€</option><option value="15">15€</option></select></div>
+      <div class="fg"><label>Guia</label><select id="e-guia"><option value="">nenhum</option></select></div>
+      <div class="fg"><label>Valor Panda EUR</label><input type="number" id="e-valor" step="0.01" min="0"></div>
+      <div class="fg"><label>Valor Parceiro EUR</label><input type="number" id="e-parceiro" step="0.01" min="0"></div>
+      <div class="fg"><label>Comissao Carla EUR</label><select id="e-comissao"><option value="0">0</option><option value="7">7</option><option value="8">8</option><option value="10">10</option><option value="15">15</option></select></div>
     </div>
     <div class="fr">
       <div class="fg"><label>% Pago</label><select id="e-pct"><option value="100">100%</option><option value="50">50%</option><option value="25">25%</option><option value="0">0%</option></select></div>
-      <div class="fg"><label>Voucher €</label><input type="number" id="e-voucher" step="0.01" min="0"></div>
-      <div class="fg"><label>Tip €</label><input type="number" id="e-tip" step="0.01" min="0"></div>
-      <div class="fg"><label>Pagamento</label><select id="e-pago"><option>Pago</option><option>Falta</option><option>MB Way</option><option>Link</option><option>SumUp</option><option>Voucher</option><option>Crédito Carla</option><option>Crédito P.Reflexo</option></select></div>
+      <div class="fg"><label>Voucher EUR</label><input type="number" id="e-voucher" step="0.01" min="0"></div>
+      <div class="fg"><label>Tip EUR</label><input type="number" id="e-tip" step="0.01" min="0"></div>
+      <div class="fg"><label>Pagamento</label><select id="e-pago"><option>Pago</option><option>Falta</option><option>MB Way</option><option>Link</option><option>SumUp</option><option>Voucher</option><option>Credito Carla</option><option>Credito P.Reflexo</option></select></div>
       <div class="fg"><label>Notas</label><input type="text" id="e-notas"></div>
     </div>
     <div style="display:flex;gap:6px;margin-top:10px">
-      <button class="btn primary" onclick="saveEdit()">💾 Guardar</button>
+      <button class="btn primary" onclick="saveEdit()">Guardar</button>
       <button class="btn" onclick="closeModal()">Cancelar</button>
     </div>
   </div>
@@ -430,42 +402,86 @@ tr:hover td{background:rgba(201,168,76,.04)}
 const CLIENT_ID='174916148434-m89op8gpken2rcqtsti302hnkoaqs0mr.apps.googleusercontent.com';
 const SHEET_ID='1zNx96p9BRF7kURdCNvvRSN4Q7ewwqtclqyYrkvIMOxM';
 const SCOPES='https://www.googleapis.com/auth/spreadsheets https://www.googleapis.com/auth/calendar';
-const SN='Servicos2026', PN='Paulo2026', AN='Anual2026', DN='Despesas2026';
-const MESES=['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+const SN='Servicos2026',PN='Paulo2026',AN='Anual2026',DN='Despesas2026';
+const MESES=['Janeiro','Fevereiro','Marco','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
 const MESES_S=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+const MESES_KEY=['JANEIRO','FEVEREIRO','MARCO','ABRIL','MAIO','JUNHO','JULHO','AGOSTO','SETEMBRO','OUTUBRO','NOVEMBRO','DEZEMBRO'];
 const REDIRECT_URI=location.origin+location.pathname;
-const SAIDAS_PRE=['Aeroporto Lisboa','Hotel','Terminal Cruzeiros','Oriente Train Station','Santa Apolónia'];
-const DESP_CAMPOS=['Tesla/Carro','Seguros','Via Verde','Contabilidade','EDP','Gás','Combustível','Continente','Casa','Google','Izzy/Net','Banco %','Alugueres','Diversos'];
+const SAIDAS_PRE=['Aeroporto Lisboa','Hotel','Terminal Cruzeiros','Oriente Train Station','Santa Apolonia'];
 
-let accessToken=null, servicos=[], pauloData=null, editId=null;
-let anualData={}, despesasData={};
+// ── DESPESAS: campos IDENTICOS ao Google Sheets (ordem exacta) ────────
+const DESP_CAMPOS=['TESLA CARRO','SEGURO','CONTABILIDADE','VIA.VERDE','CONTINENTE','PRIO','CASA','TESLA','POWERDOT-UBER','ADW','DIVERSOS','BANCO %','Alugueres','Diversos'];
+function despKey(c){return 'desp-'+c.replace(/[^a-zA-Z0-9]/g,'_');}
+
+// ── ANUAL: colunas IDENTICAS ao Google Sheets ────────────────────────
+// Sheet: PandaTour | PARCEIROS | CARLA EUR | CARLA VCH | CARLA % | LIQUIDO | TIPS GERAIS | PDTOUR-DADOS | (vazio) | UBER | BOLT
+// Calculadas: PandaTour, Parceiros, Carla EUR (=total Carla), Carla VCH, Carla %, Liquido Carla, Tips Gerais
+// Editaveis manualmente: PdTour-Dados, Uber, Bolt
+const ANUAL_COLS=[
+  {k:'pt',      label:'PandaTour',    edit:false, neg:false},
+  {k:'parc',    label:'PARCEIROS',    edit:false, neg:true},
+  {k:'carlaEur',label:'CARLA EUR',    edit:false, neg:false},
+  {k:'carlaVCH',label:'CARLA VCH',   edit:false, neg:false},
+  {k:'carlaPct',label:'CARLA %',      edit:false, neg:true},
+  {k:'liqCarla',label:'LIQUIDO Carla',edit:false, neg:false},
+  {k:'tips',    label:"TIPS GERAIS",  edit:false, neg:false},
+  {k:'pdtour',  label:'PDTOUR-DADOS', edit:true,  neg:false},
+  {k:'uber',    label:'UBER',         edit:true,  neg:false},
+  {k:'bolt',    label:'BOLT',         edit:true,  neg:false},
+  {k:'totRec',  label:'TOTAL REC.',   edit:false, neg:false},
+  {k:'totDesp', label:'TOTAL DESP.',  edit:false, neg:true},
+  {k:'liq',     label:'LIQUIDO',      edit:false, neg:false},
+];
+
+let accessToken=null,servicos=[],pauloData=null,editId=null;
+let anualData={},despesasData={};
+let autoRefreshInterval=null;
 let motoristas=JSON.parse(localStorage.getItem('pt_mot')||'null')||[
   {nome:'PANDA',cor:'#1D9E75'},{nome:'IGOR',cor:'#4285F4'},{nome:'IDALINA',cor:'#E24B4A'}
 ];
 let guias=JSON.parse(localStorage.getItem('pt_gui')||'null')||[
-  {nome:'JÚLIA',cor:'#534AB7'},{nome:'KSENIA',cor:'#0F6E56'}
+  {nome:'JULIA',cor:'#534AB7'},{nome:'KSENIA',cor:'#0F6E56'}
 ];
 
 function saveLocal(){localStorage.setItem('pt_mot',JSON.stringify(motoristas));localStorage.setItem('pt_gui',JSON.stringify(guias));}
 function fmtN(v){return parseFloat(v)||0;}
 function e(id){return document.getElementById(id);}
-function fmt(v){return v?'€'+fmtN(v).toFixed(2):'—';}
+function eur(v){return v?'E'+fmtN(v).toFixed(2):'-';}
 
-function togglePctCustom(){
-  const v=e('f-pct').value;
-  e('fg-pct-custom').style.display=v==='custom'?'flex':'none';
+function togglePctCustom(){e('fg-pct-custom').style.display=e('f-pct').value==='custom'?'flex':'none';}
+
+function calcMargem(p){
+  const val=fmtN(e(p+'-valor').value),par=fmtN(e(p+'-parceiro').value),com=fmtN(e(p+'-comissao').value);
+  const pctSel=e(p+'-pct').value;
+  const pct=pctSel==='custom'?fmtN(e(p+'-pct-val')?e(p+'-pct-val').value:100):fmtN(pctSel)||100;
+  const margem=val*(pct/100)-par-com;
+  const el=e(p+'-margem');
+  if(el){el.textContent=margem!==0?'E'+margem.toFixed(2):'-';el.style.color=margem>=0?'#2ECC71':'var(--red)';}
 }
 
-function calcMargem(prefix){
-  const val=fmtN(e(prefix+'-valor').value);
-  const par=fmtN(e(prefix+'-parceiro').value);
-  const com=fmtN(e(prefix+'-comissao').value);
-  const pctSel=e(prefix+'-pct').value;
-  const pct=pctSel==='custom'?fmtN(e(prefix+'-pct-val')?e(prefix+'-pct-val').value:100):fmtN(pctSel)||100;
-  const rec=val*(pct/100);
-  const margem=rec-par-com;
-  const el=e(prefix+'-margem');
-  if(el){el.textContent=margem!==0?'€'+margem.toFixed(2):'—';el.style.color=margem>=0?'var(--g2)':'var(--red)';}
+// ── REFRESH ──────────────────────────────────────────────────────────
+function updateLastSync(){
+  const el=e('last-sync');if(!el)return;
+  const n=new Date();
+  el.textContent='sync '+n.getHours().toString().padStart(2,'0')+':'+n.getMinutes().toString().padStart(2,'0');
+}
+async function manualRefresh(){
+  const btn=e('btn-refresh');
+  btn.innerHTML='<span class="spinning">&#8635;</span>';btn.disabled=true;
+  await loadData();
+  const ap=document.querySelector('.panel.active');
+  if(ap){const id=ap.id.replace('panel-','');
+    if(id==='financeiro')renderFinanceiro();
+    else if(id==='anual')renderAnual();
+    else if(id==='equipa')renderEquipa();
+    else if(id==='despesas')renderDespesas();
+    else if(id==='vouchers')renderPontoReflexo();
+  }
+  btn.innerHTML='&#8635; Sync';btn.disabled=false;
+}
+function startAutoRefresh(min=5){
+  if(autoRefreshInterval)clearInterval(autoRefreshInterval);
+  autoRefreshInterval=setInterval(manualRefresh,min*60*1000);
 }
 
 window.onload=function(){
@@ -480,9 +496,7 @@ window.onload=function(){
   const stored=sessionStorage.getItem('pt_token');
   if(stored){accessToken=stored;showApp();loadData();return;}
   e('login-view').style.display='flex';
-  // Set current month for despesas
-  const now=new Date();
-  const m=(now.getMonth()+1).toString().padStart(2,'0');
+  const m=(new Date().getMonth()+1).toString().padStart(2,'0');
   if(e('desp-mes'))e('desp-mes').value=m;
 };
 
@@ -495,9 +509,9 @@ function doLogout(){accessToken=null;sessionStorage.removeItem('pt_token');locat
 function showApp(){
   e('login-view').style.display='none';e('app-view').style.display='block';
   initAllSelects();renderLegends();fetchUserInfo();
-  const now=new Date();
-  const m=(now.getMonth()+1).toString().padStart(2,'0');
+  const m=(new Date().getMonth()+1).toString().padStart(2,'0');
   if(e('desp-mes'))e('desp-mes').value=m;
+  updateLastSync();startAutoRefresh(5);
 }
 
 async function fetchUserInfo(){
@@ -526,14 +540,6 @@ async function ensureSheets(){
     const sh=info.sheets||[];const req=[];
     [SN,PN,AN,DN].forEach(name=>{if(!sh.some(s=>s.properties.title===name))req.push({addSheet:{properties:{title:name}}});});
     if(req.length)await sheetsReq('POST',':batchUpdate',{requests:req});
-    if(!sh.some(s=>s.properties.title===SN))
-      await sheetsReq('PUT','/values/'+SN+'!A1:U1?valueInputOption=RAW',{values:[COLS]});
-    if(!sh.some(s=>s.properties.title===PN))
-      await sheetsReq('PUT','/values/'+PN+'!A1:B14?valueInputOption=RAW',{values:[
-        ['MES','PAGO'],['DIVIDA_INICIAL','10300'],
-        ['JANEIRO','687.45'],['FEVEREIRO','648.97'],['MARCO','776.75'],['ABRIL','684.32'],
-        ['MAIO','0'],['JUNHO','0'],['JULHO','0'],['AGOSTO','0'],['SETEMBRO','0'],['OUTUBRO','0'],['NOVEMBRO','0'],['DEZEMBRO','0']
-      ]});
   }catch(err){console.warn(err);}
 }
 
@@ -549,10 +555,9 @@ async function loadData(){
       voucher:row[17]||'',tip:row[18]||'',notas:row[19]||'',calEventId:row[20]||''
     })).filter(s=>s.id);
     renderTable();renderCards();
-    await loadPauloDebt();
-    await loadAnual();
-    await loadDespesas();
-    showSync('Sincronizado ✓');setTimeout(()=>e('sync-bar').style.display='none',2500);
+    await loadPauloDebt();await loadAnual();await loadDespesas();
+    updateLastSync();
+    showSync('Sincronizado');setTimeout(()=>e('sync-bar').style.display='none',2500);
   }catch(err){showSync('Erro: '+err.message);}
 }
 
@@ -561,55 +566,54 @@ async function loadPauloDebt(){
 }
 
 async function loadAnual(){
+  // Sheet cols (0-indexed after MES col):
+  // 0=MES 1=PandaTour 2=PARCEIROS 3=CARLA EUR 4=CARLA VCH 5=CARLA% 6=LIQUIDO 7=TIPS 8=PDTOUR-DADOS 9=(empty) 10=UBER 11=BOLT
   try{
-    const r=await sheetsReq('GET','/values/'+AN+'!A1:N13');
+    const r=await sheetsReq('GET','/values/'+AN+'!A1:L14');
     if(r&&r.values){
       r.values.forEach(row=>{
-        if(row[0]&&row[0]!=='MES'){
-          const m=row[0];
-          anualData[m]={uber:row[1]||'0',bolt:row[2]||'0',uber_liq:row[3]||'0',bolt_liq:row[4]||'0'};
+        const mk=(row[0]||'').toUpperCase().trim()
+          .replace('MARCO','MARCO').replace('\u00c7','C').replace('\u00e7','c');
+        // Normalise: remove accents for key matching
+        const key=mk.normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+        if(key&&key!=='MES'&&key!=='TOTAIS'){
+          anualData[key]={pdtour:row[8]||'0',uber:row[10]||'0',bolt:row[11]||'0'};
         }
       });
     }
-  }catch(x){}
+  }catch(x){console.warn('loadAnual',x);}
 }
 
 async function loadDespesas(){
+  // Sheet cols: MES | TESLA CARRO | SEGURO | CONTABILIDADE | VIA.VERDE | CONTINENTE | PRIO | CASA | TESLA | POWERDOT-UBER | ADW | DIVERSOS | BANCO % | Alugueres | Diversos
   try{
-    const r=await sheetsReq('GET','/values/'+DN+'!A1:O13');
+    const r=await sheetsReq('GET','/values/'+DN+'!A1:O14');
     if(r&&r.values){
       r.values.slice(1).forEach(row=>{
-        if(row[0]){
-          const m=row[0];despesasData[m]={};
-          DESP_CAMPOS.forEach((c,i)=>{despesasData[m][c]=fmtN(row[i+1]);});
+        const mk=(row[0]||'').toUpperCase().trim();
+        const key=mk.normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+        if(key&&key!=='TOTAIS'){
+          despesasData[key]={};
+          DESP_CAMPOS.forEach((c,i)=>{despesasData[key][c]=fmtN(row[i+1]);});
         }
       });
     }
-  }catch(x){}
+  }catch(x){console.warn('loadDespesas',x);}
 }
 
 function showSync(msg){e('sync-bar').style.display='flex';e('sync-msg').textContent=msg;}
+function makeRow(s){return[s.id,s.data,s.hora,s.tipo,s.src,s.agencia,s.saida,s.saidaLivre||'',s.destino,s.voo,s.motorista,s.guia,s.valor,s.parceiro,s.comissao,s.pct,s.pago,s.voucher,s.tip,s.notas,s.calEventId||''];}
 
-function makeRow(s){
-  return [s.id,s.data,s.hora,s.tipo,s.src,s.agencia,s.saida,s.saidaLivre||'',s.destino,s.voo,
-    s.motorista,s.guia,s.valor,s.parceiro,s.comissao,s.pct,s.pago,s.voucher,s.tip,s.notas,s.calEventId||''];
-}
-
-function getFormData(prefix){
-  const pctSel=e(prefix+'-pct').value;
-  const pct=pctSel==='custom'?(fmtN(e(prefix+'-pct-val')?e(prefix+'-pct-val').value:100)):pctSel;
-  return {
-    id:'srv_'+Date.now(),
-    data:e(prefix+'-data').value,hora:e(prefix+'-hora').value,tipo:e(prefix+'-tipo').value,
-    src:e(prefix+'-src').value,agencia:e(prefix+'-agencia').value,
-    saida:e(prefix+'-saida').value,saidaLivre:e(prefix+'-saida-livre')?e(prefix+'-saida-livre').value:'',
-    destino:e(prefix+'-destino').value,voo:e(prefix+'-voo').value,
-    motorista:e(prefix+'-motorista').value,guia:e(prefix+'-guia').value,
-    valor:e(prefix+'-valor').value,parceiro:e(prefix+'-parceiro').value,
-    comissao:e(prefix+'-comissao').value,pct:pct,
-    pago:e(prefix+'-pago').value,voucher:e(prefix+'-voucher').value,
-    tip:e(prefix+'-tip').value,notas:e(prefix+'-notas').value,calEventId:''
-  };
+function getFormData(p){
+  const pctSel=e(p+'-pct').value;
+  const pct=pctSel==='custom'?(fmtN(e(p+'-pct-val')?e(p+'-pct-val').value:100)):pctSel;
+  return{id:'srv_'+Date.now(),data:e(p+'-data').value,hora:e(p+'-hora').value,tipo:e(p+'-tipo').value,
+    src:e(p+'-src').value,agencia:e(p+'-agencia').value,saida:e(p+'-saida').value,
+    saidaLivre:e(p+'-saida-livre')?e(p+'-saida-livre').value:'',destino:e(p+'-destino').value,
+    voo:e(p+'-voo').value,motorista:e(p+'-motorista').value,guia:e(p+'-guia').value,
+    valor:e(p+'-valor').value,parceiro:e(p+'-parceiro').value,comissao:e(p+'-comissao').value,
+    pct:pct,pago:e(p+'-pago').value,voucher:e(p+'-voucher').value,tip:e(p+'-tip').value,
+    notas:e(p+'-notas').value,calEventId:''};
 }
 
 async function addServico(){
@@ -619,7 +623,7 @@ async function addServico(){
     await sheetsReq('POST','/values/'+SN+'!A:U:append?valueInputOption=RAW&insertDataOption=INSERT_ROWS',{values:[makeRow(s)]});
     servicos.push(s);servicos.sort((a,b)=>a.data.localeCompare(b.data));
     renderTable();renderCards();clearForm('f');
-    showSync('Guardado ✓');setTimeout(()=>e('sync-bar').style.display='none',2500);
+    showSync('Guardado');setTimeout(()=>e('sync-bar').style.display='none',2500);
   }catch(err){showSync('Erro: '+err.message);}
 }
 
@@ -630,47 +634,41 @@ async function addServicoVoucher(){
     await sheetsReq('POST','/values/'+SN+'!A:U:append?valueInputOption=RAW&insertDataOption=INSERT_ROWS',{values:[makeRow(s)]});
     servicos.push(s);servicos.sort((a,b)=>a.data.localeCompare(b.data));
     renderTable();renderCards();clearForm('vf');
-    e('parse-result').innerHTML='<span style="color:var(--g2)">✓ Guardado!</span>';
-    showSync('Guardado ✓');setTimeout(()=>e('sync-bar').style.display='none',2500);
+    e('parse-result').innerHTML='<span style="color:#2ECC71">Guardado!</span>';
+    showSync('Guardado');setTimeout(()=>e('sync-bar').style.display='none',2500);
   }catch(err){showSync('Erro: '+err.message);}
 }
 
 function clearForm(p){
-  const ids=[p+'-data',p+'-hora',p+'-agencia',p+'-saida-livre',p+'-destino',p+'-voo',p+'-valor',p+'-parceiro',p+'-voucher',p+'-tip',p+'-notas'];
-  ids.forEach(id=>{if(e(id))e(id).value='';});
-  if(e(p+'-margem'))e(p+'-margem').textContent='—';
+  ['data','hora','agencia','saida-livre','destino','voo','valor','parceiro','voucher','tip','notas'].forEach(f=>{if(e(p+'-'+f))e(p+'-'+f).value='';});
+  if(e(p+'-margem'))e(p+'-margem').textContent='-';
 }
 
-// EDIT
 function openEdit(id){
-  const s=servicos.find(x=>x.id===id);if(!s)return;
-  editId=id;
-  const fields=['data','hora','tipo','src','agencia','saida','saida-livre','destino','voo','motorista','guia','valor','parceiro','comissao','pct','pago','voucher','tip','notas'];
-  fields.forEach(f=>{const el=e('e-'+f);if(el)el.value=s[f.replace('-','')]||s[f]||'';});
-  // fix saidaLivre specifically
+  const s=servicos.find(x=>x.id===id);if(!s)return;editId=id;
+  ['data','hora','tipo','src','agencia','saida','destino','voo','valor','parceiro','comissao','pct','pago','voucher','tip','notas'].forEach(f=>{const el=e('e-'+f);if(el)el.value=s[f]||'';});
   if(e('e-saida-livre'))e('e-saida-livre').value=s.saidaLivre||'';
   initSelectValues('e-motorista',motoristas.map(m=>m.nome),s.motorista);
-  initSelectValues('e-guia',guias.map(m=>m.nome),s.guia,'— nenhum —');
+  initSelectValues('e-guia',guias.map(m=>m.nome),s.guia,'nenhum');
   e('modal-bg').classList.add('open');
 }
 function closeModal(){e('modal-bg').classList.remove('open');editId=null;}
 
 async function saveEdit(){
   const s=servicos.find(x=>x.id===editId);if(!s)return;
-  const fields=['data','hora','tipo','src','agencia','saida','destino','voo','motorista','guia','valor','parceiro','comissao','pct','pago','voucher','tip','notas'];
-  fields.forEach(f=>{const el=e('e-'+f);if(el)s[f]=el.value;});
+  ['data','hora','tipo','src','agencia','saida','destino','voo','motorista','guia','valor','parceiro','comissao','pct','pago','voucher','tip','notas'].forEach(f=>{const el=e('e-'+f);if(el)s[f]=el.value;});
   if(e('e-saida-livre'))s.saidaLivre=e('e-saida-livre').value;
-  showSync('A guardar edição...');
+  showSync('A guardar...');
   try{
-    const idx=servicos.findIndex(x=>x.id===editId);const row=idx+2;
-    await sheetsReq('PUT','/values/'+SN+'!A'+row+':U'+row+'?valueInputOption=RAW',{values:[makeRow(s)]});
+    const idx=servicos.findIndex(x=>x.id===editId);
+    await sheetsReq('PUT','/values/'+SN+'!A'+(idx+2)+':U'+(idx+2)+'?valueInputOption=RAW',{values:[makeRow(s)]});
     renderTable();renderCards();closeModal();
-    showSync('Editado ✓');setTimeout(()=>e('sync-bar').style.display='none',2500);
+    showSync('Editado');setTimeout(()=>e('sync-bar').style.display='none',2500);
   }catch(err){showSync('Erro: '+err.message);}
 }
 
 async function deleteServico(id){
-  if(!confirm('Remover serviço?'))return;
+  if(!confirm('Remover servico?'))return;
   const idx=servicos.findIndex(s=>s.id===id);if(idx<0)return;
   showSync('A remover...');
   try{
@@ -678,97 +676,65 @@ async function deleteServico(id){
     const gid=(info.sheets.find(s=>s.properties.title===SN)||{properties:{sheetId:0}}).properties.sheetId;
     await sheetsReq('POST',':batchUpdate',{requests:[{deleteDimension:{range:{sheetId:gid,dimension:'ROWS',startIndex:idx+1,endIndex:idx+2}}}]});
     servicos.splice(idx,1);renderTable();renderCards();
-    showSync('Removido ✓');setTimeout(()=>e('sync-bar').style.display='none',2000);
+    showSync('Removido');setTimeout(()=>e('sync-bar').style.display='none',2000);
   }catch(err){showSync('Erro: '+err.message);}
 }
 
 async function togglePago(id){
   const s=servicos.find(x=>x.id===id);if(!s)return;
-  const opts=['Pago','Falta','MB Way','Link','SumUp','Voucher','Crédito Carla','Crédito P.Reflexo'];
+  const opts=['Pago','Falta','MB Way','Link','SumUp','Voucher','Credito Carla','Credito P.Reflexo'];
   s.pago=opts[(opts.indexOf(s.pago)+1)%opts.length];
   renderTable();renderCards();
   const idx=servicos.findIndex(x=>x.id===id);
   await sheetsReq('PUT','/values/'+SN+'!Q'+(idx+2)+'?valueInputOption=RAW',{values:[[s.pago]]});
 }
 
-// CALENDAR
 async function addToCalendar(id){
   const s=servicos.find(x=>x.id===id);if(!s)return;
   const hh=s.hora?s.hora.split(':'):[9,0];
   const endH=(parseInt(hh[0])+1).toString().padStart(2,'0');
   const min=(hh[1]||'00').toString().padStart(2,'0');
   const isIN=s.tipo.includes('IN'),isOUT=s.tipo.includes('OUT');
-  const shortTipo=isIN?'IN':isOUT?'OUT':s.tipo;
-  const vooStr=s.voo?s.voo.split('/')[0].trim():'';
-  const title=shortTipo+(vooStr?' – '+vooStr:'')+(s.agencia?' | '+s.agencia:'');
+  const title=(isIN?'IN':isOUT?'OUT':s.tipo)+(s.voo?' - '+s.voo.split('/')[0].trim():'')+(s.agencia?' | '+s.agencia:'');
   const saidaReal=s.saida==='Outro / Morada'?s.saidaLivre:s.saida;
-  const loc=s.destino||(saidaReal||'');
-  const descLines=['Motorista: '+(s.motorista||'?')];
-  if(saidaReal)descLines.push('Saída: '+saidaReal);
-  if(s.destino)descLines.push('Destino: '+s.destino);
-  if(s.voo)descLines.push('Voo: '+s.voo);
-  descLines.push('Valor: €'+fmtN(s.valor).toFixed(2));
-  if(fmtN(s.voucher)>0)descLines.push(fmtN(s.voucher).toFixed(0)+'€ VCH');
-  descLines.push('Origem: '+(s.src||'?'));
-  if(s.notas)descLines.push('Notas: '+s.notas);
-  const event={
-    summary:title,location:loc,description:descLines.join('\n'),
+  const desc=['Motorista: '+(s.motorista||'?')];
+  if(saidaReal)desc.push('Saida: '+saidaReal);if(s.destino)desc.push('Destino: '+s.destino);
+  if(s.voo)desc.push('Voo: '+s.voo);desc.push('Valor: E'+fmtN(s.valor).toFixed(2));
+  if(s.notas)desc.push('Notas: '+s.notas);
+  const event={summary:title,location:s.destino||saidaReal||'',description:desc.join('\n'),
     start:{dateTime:s.data+'T'+(s.hora||'09:00')+':00',timeZone:'Europe/Lisbon'},
     end:{dateTime:s.data+'T'+endH+':'+min+':00',timeZone:'Europe/Lisbon'},
     colorId:isIN?'2':isOUT?'11':'5',
-    reminders:{useDefault:false,overrides:[{method:'popup',minutes:30}]}
-  };
+    reminders:{useDefault:false,overrides:[{method:'popup',minutes:30}]}};
   try{
     const r=await fetch('https://www.googleapis.com/calendar/v3/calendars/primary/events',{
-      method:'POST',headers:{Authorization:'Bearer '+accessToken,'Content-Type':'application/json'},body:JSON.stringify(event)
-    });
+      method:'POST',headers:{Authorization:'Bearer '+accessToken,'Content-Type':'application/json'},body:JSON.stringify(event)});
     const ev=await r.json();s.calEventId=ev.id||'done';
     const idx=servicos.findIndex(x=>x.id===id);
     await sheetsReq('PUT','/values/'+SN+'!U'+(idx+2)+'?valueInputOption=RAW',{values:[[s.calEventId]]});
-    renderTable();showSync('✓ Google Calendar');setTimeout(()=>e('sync-bar').style.display='none',2500);
+    renderTable();showSync('Google Calendar OK');setTimeout(()=>e('sync-bar').style.display='none',2500);
   }catch(err){showSync('Erro Calendar: '+err.message);}
 }
 
 async function exportCalSelected(){
   const ids=[...document.querySelectorAll('.chk-row:checked')].map(c=>c.dataset.id);
-  if(!ids.length){alert('Seleciona pelo menos um serviço!');return;}
+  if(!ids.length){alert('Seleciona pelo menos um servico!');return;}
   showSync('A exportar...');for(const id of ids)await addToCalendar(id);
-  showSync('✓ Exportado');setTimeout(()=>e('sync-bar').style.display='none',3000);
+  showSync('Exportado');setTimeout(()=>e('sync-bar').style.display='none',3000);
 }
 function toggleAll(cb){document.querySelectorAll('.chk-row').forEach(c=>c.checked=cb.checked);}
 
-// ---- AI VOUCHER READER ----
-let uploadedFileData=null;
-let uploadedFileType=null;
-
-function handleDrop(ev){
-  ev.preventDefault();
-  e('upload-area').style.borderColor='var(--bdr)';
-  const file=ev.dataTransfer.files[0];
-  if(file)processFile(file);
-}
-
-function handleFileSelect(input){
-  const file=input.files[0];
-  if(file)processFile(file);
-}
-
+// AI VOUCHER
+let uploadedFileData=null,uploadedFileType=null;
+function handleDrop(ev){ev.preventDefault();const f=ev.dataTransfer.files[0];if(f)processFile(f);}
+function handleFileSelect(input){const f=input.files[0];if(f)processFile(f);}
 function processFile(file){
-  if(file.size>10*1024*1024){alert('Ficheiro muito grande (max 10MB)');return;}
-  const preview=e('file-preview');
-  preview.style.display='block';
-  preview.innerHTML='📎 '+file.name+' ('+Math.round(file.size/1024)+'KB) — a preparar...';
+  if(file.size>10*1024*1024){alert('Max 10MB');return;}
+  const fp=e('file-preview');fp.style.display='block';fp.innerHTML='Preparando '+file.name+'...';
   const reader=new FileReader();
-  reader.onload=function(ev){
-    const result=ev.target.result;
-    uploadedFileData=result.split(',')[1]; // base64
-    const mt=file.type||'image/jpeg';
-    uploadedFileType=mt.includes('pdf')?'application/pdf':mt;
-    preview.innerHTML='✅ '+file.name+' — pronto para analisar!';
-  };
+  reader.onload=ev=>{uploadedFileData=ev.target.result.split(',')[1];uploadedFileType=file.type.includes('pdf')?'application/pdf':file.type;fp.innerHTML='OK '+file.name;};
   reader.readAsDataURL(file);
 }
-
 function clearVoucherForm(){
   uploadedFileData=null;uploadedFileType=null;
   const fi=e('file-input');if(fi)fi.value='';
@@ -776,130 +742,56 @@ function clearVoucherForm(){
   if(e('paste-text'))e('paste-text').value='';
   if(e('parse-result'))e('parse-result').innerHTML='';
 }
-
 async function analyzeWithAI(){
   const txt=e('paste-text').value.trim();
-  if(!uploadedFileData&&!txt){alert('Faz upload de um ficheiro ou cola texto primeiro.');return;}
-  const btn=e('btn-ai');btn.disabled=true;btn.textContent='⏳ A analisar...';
-  e('ai-loading').style.display='block';
-  e('parse-result').innerHTML='';
-
-  const motoristasStr=motoristas.map(m=>m.nome).join(', ');
-  const systemPrompt=`És um assistente que extrai informação de vouchers de transfer e turismo em Portugal.
-Responde APENAS com JSON válido, sem texto adicional, sem markdown.
-Os motoristas disponíveis são: ${motoristasStr}.
-O ano é sempre 2026 se não especificado.
-Devolve este formato exacto:
-{
-  "data": "2026-MM-DD",
-  "hora": "HH:MM",
-  "tipo": "Transfer IN" ou "Transfer OUT" ou "Tour" ou "Meet & Greet" ou "Outros",
-  "agencia": "nome da agência ou operador",
-  "saida": "Aeroporto Lisboa" ou "Hotel" ou "Terminal Cruzeiros" ou "Oriente Train Station" ou "Santa Apolónia" ou "Outro / Morada",
-  "saida_livre": "morada específica se for Outro",
-  "destino": "hotel ou destino final",
-  "voo": "número de voo e/ou pax, ex: FR3683 / 2pax",
-  "valor": "valor numérico em euros",
-  "motorista": "nome do motorista se mencionado, senão vazio",
-  "ref": "referência de reserva",
-  "notas": "outras informações relevantes"
-}`;
-
+  if(!uploadedFileData&&!txt){alert('Faz upload ou cola texto.');return;}
+  const btn=e('btn-ai');btn.disabled=true;btn.textContent='A analisar...';
+  e('ai-loading').style.display='block';e('parse-result').innerHTML='';
+  const sysPrompt='Es um assistente que extrai informacao de vouchers de transfer em Portugal. Responde APENAS com JSON valido sem markdown. Motoristas: '+motoristas.map(m=>m.nome).join(', ')+'. Formato: {"data":"2026-MM-DD","hora":"HH:MM","tipo":"Transfer IN","agencia":"","saida":"Aeroporto Lisboa","saida_livre":"","destino":"","voo":"","valor":"","motorista":"","ref":"","notas":""}';
   try{
-    let messages;
-    if(uploadedFileData){
-      const contentType=uploadedFileType;
-      messages=[{role:'user',content:[
-        {type:contentType==='application/pdf'?'document':'image',
-         source:{type:'base64',media_type:contentType,data:uploadedFileData}},
-        {type:'text',text:'Extrai toda a informação relevante deste voucher/documento de transfer e devolve o JSON.'}
-      ]}];
-    }else{
-      messages=[{role:'user',content:'Extrai a informação deste voucher:\n\n'+txt+'\n\nDevolve apenas o JSON.'}];
-    }
-
-    const response=await fetch('https://api.anthropic.com/v1/messages',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        model:'claude-sonnet-4-20250514',
-        max_tokens:1000,
-        system:systemPrompt,
-        messages
-      })
-    });
-
+    const messages=uploadedFileData?[{role:'user',content:[{type:uploadedFileType==='application/pdf'?'document':'image',source:{type:'base64',media_type:uploadedFileType,data:uploadedFileData}},{type:'text',text:'Extrai informacao deste voucher e devolve JSON.'}]}]:[{role:'user',content:'Extrai do voucher:\n\n'+txt+'\n\nJSON apenas.'}];
+    const response=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,system:sysPrompt,messages})});
     const data=await response.json();
-    const rawText=data.content.map(c=>c.text||'').join('');
-    const clean=rawText.replace(/```json|```/g,'').trim();
-    const parsed=JSON.parse(clean);
-
-    // Fill form
+    const parsed=JSON.parse(data.content.map(c=>c.text||'').join('').replace(/```json|```/g,'').trim());
     if(parsed.data)e('vf-data').value=parsed.data;
     if(parsed.hora)e('vf-hora').value=parsed.hora;
     if(parsed.tipo)e('vf-tipo').value=parsed.tipo;
     if(parsed.agencia)e('vf-agencia').value=parsed.agencia;
-    if(parsed.saida){
-      const sel=e('vf-saida');
-      for(let i=0;i<sel.options.length;i++){if(sel.options[i].value===parsed.saida){sel.selectedIndex=i;break;}}
-    }
+    if(parsed.saida){const sel=e('vf-saida');for(let i=0;i<sel.options.length;i++){if(sel.options[i].value===parsed.saida){sel.selectedIndex=i;break;}}}
     if(parsed.saida_livre&&e('vf-saida-livre'))e('vf-saida-livre').value=parsed.saida_livre;
     if(parsed.destino)e('vf-destino').value=parsed.destino;
     if(parsed.voo)e('vf-voo').value=parsed.voo;
     if(parsed.valor)e('vf-valor').value=parsed.valor;
     if(parsed.notas)e('vf-notas').value=parsed.notas;
     if(parsed.ref)e('vf-voo').value=(parsed.voo?parsed.voo+' / ':'')+parsed.ref;
-    if(parsed.motorista){
-      const sel=e('vf-motorista');
-      for(let i=0;i<sel.options.length;i++){if(sel.options[i].value===parsed.motorista){sel.selectedIndex=i;break;}}
-    }
-
-    const found=Object.entries(parsed).filter(([k,v])=>v&&v!=='').map(([k])=>k);
-    e('parse-result').innerHTML='<span style="color:var(--g2);font-weight:600">🤖 IA extraiu: '+found.join(', ')+'</span><br><span style="color:#888;font-size:10px">Confirma os campos abaixo e guarda.</span>';
-
-  }catch(err){
-    e('parse-result').innerHTML='<span style="color:var(--red)">Erro: '+err.message+'. Tenta colar o texto manualmente.</span>';
-  }finally{
-    btn.disabled=false;btn.innerHTML='🤖 Analisar com IA';
-    e('ai-loading').style.display='none';
-  }
+    if(parsed.motorista){const sel=e('vf-motorista');for(let i=0;i<sel.options.length;i++){if(sel.options[i].value===parsed.motorista){sel.selectedIndex=i;break;}}}
+    e('parse-result').innerHTML='<span style="color:#2ECC71">IA OK. Confirma e guarda.</span>';
+  }catch(err){e('parse-result').innerHTML='<span style="color:var(--red)">Erro: '+err.message+'</span>';}
+  finally{btn.disabled=false;btn.innerHTML='IA Analisar com IA';e('ai-loading').style.display='none';}
 }
 
-// PARSE VOUCHER
 function parseVoucher(){
   const txt=e('paste-text').value;if(!txt.trim())return;
-  const mA={jan:'01',fev:'02',mar:'03',abr:'04',mai:'05',jun:'06',jul:'07',ago:'08',set:'09',out:'10',nov:'11',dez:'12',
-    janeiro:'01',fevereiro:'02','março':'03',marco:'03',abril:'04',maio:'05',junho:'06',julho:'07',agosto:'08',setembro:'09',outubro:'10',novembro:'11',dezembro:'12'};
-  let data='';
-  const mD=txt.match(/(\d{1,2})\s+(jan\w*|fev\w*|mar\w*|abr\w*|mai\w*|jun\w*|jul\w*|ago\w*|set\w*|out\w*|nov\w*|dez\w*)/i)||txt.match(/(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})/);
-  if(mD){const k=(mD[2]||'').toLowerCase().substring(0,3);if(mA[k])data='2026-'+mA[k]+'-'+mD[1].padStart(2,'0');else if(mD[3])data=mD[3]+'-'+mD[2].padStart(2,'0')+'-'+mD[1].padStart(2,'0');}
+  const mA={jan:'01',fev:'02',mar:'03',abr:'04',mai:'05',jun:'06',jul:'07',ago:'08',set:'09',out:'10',nov:'11',dez:'12'};
+  let data='';const mD=txt.match(/(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})/)||txt.match(/(\d{1,2})\s+([a-z]{3})\w*/i);
+  if(mD&&mD[3])data=mD[3]+'-'+mD[2].padStart(2,'0')+'-'+mD[1].padStart(2,'0');
+  else if(mD){const k=(mD[2]||'').toLowerCase().substring(0,3);if(mA[k])data='2026-'+mA[k]+'-'+mD[1].padStart(2,'0');}
   let hora='';const mH=txt.match(/(\d{1,2})[h:](\d{2})/i);if(mH)hora=mH[1].padStart(2,'0')+':'+mH[2];
-  let tipo='Transfer IN';
-  if(/transfer\s*out|saída|departure/i.test(txt))tipo='Transfer OUT';
-  else if(/tour|excurs/i.test(txt))tipo='Tour';
-  else if(/guia/i.test(txt))tipo='Guia';
-  let saida='',saidaLivre='';
-  const mS=txt.match(/sa[íi]da[:\s]+([^\n]+)/i)||txt.match(/pickup[:\s]+([^\n]+)/i);
-  if(mS){const v=mS[1].trim();const found=SAIDAS_PRE.find(o=>v.toLowerCase().includes(o.toLowerCase().split(' ')[0]));saida=found||'Outro / Morada';if(!found)saidaLivre=v;}
-  if(!saida&&/aeroporto|airport/i.test(txt))saida='Aeroporto Lisboa';
+  let tipo='Transfer IN';if(/out|saida|departure/i.test(txt))tipo='Transfer OUT';else if(/tour/i.test(txt))tipo='Tour';
+  let saida='',saidaLivre='';if(/aeroporto|airport/i.test(txt))saida='Aeroporto Lisboa';
   let destino='';const mDe=txt.match(/destino[:\s]+([^\n]+)/i)||txt.match(/hotel[:\s]+([^\n]+)/i);if(mDe)destino=mDe[1].trim();
-  let voo='';const mV=txt.match(/voo[:\s]+([A-Z0-9]+)/i)||txt.match(/\b([A-Z]{2}\d{3,4})\b/);const mPx=txt.match(/(\d+)\s*pax/i);
+  let voo='';const mV=txt.match(/\b([A-Z]{2}\d{3,4})\b/);const mPx=txt.match(/(\d+)\s*pax/i);
   if(mV)voo=mV[1];if(mPx)voo+=(voo?' / ':'')+mPx[1]+'pax';
-  let agencia='';const mAg=txt.match(/ag[eê]ncia[:\s]+([^\n]+)/i)||txt.match(/cliente[:\s]+([^\n]+)/i);if(mAg)agencia=mAg[1].trim();
-  let valor='';const mVl=txt.match(/valor[:\s]+€?(\d+[,.]?\d*)/i)||txt.match(/€\s*(\d+[,.]?\d*)/)||txt.match(/(\d+[,.]?\d*)\s*€/);if(mVl)valor=mVl[1].replace(',','.');
+  let valor='';const mVl=txt.match(/EUR?\s*(\d+[,.]?\d*)/i)||txt.match(/(\d+[,.]?\d*)\s*EUR?/i);if(mVl)valor=mVl[1].replace(',','.');
   let motorista='';const mMo=motoristas.find(m=>txt.toUpperCase().includes(m.nome));if(mMo)motorista=mMo.nome;
-
-  if(data)e('vf-data').value=data;if(hora)e('vf-hora').value=hora;
-  e('vf-tipo').value=tipo;if(agencia)e('vf-agencia').value=agencia;
+  if(data)e('vf-data').value=data;if(hora)e('vf-hora').value=hora;e('vf-tipo').value=tipo;
   if(saida){const sel=e('vf-saida');for(let i=0;i<sel.options.length;i++){if(sel.options[i].value===saida){sel.selectedIndex=i;break;}}}
-  if(e('vf-saida-livre'))e('vf-saida-livre').value=saidaLivre;
   if(destino)e('vf-destino').value=destino;if(voo)e('vf-voo').value=voo;if(valor)e('vf-valor').value=valor;
   if(motorista){const sel=e('vf-motorista');for(let i=0;i<sel.options.length;i++){if(sel.options[i].value===motorista){sel.selectedIndex=i;break;}}}
-  const found=[];if(data)found.push('data');if(hora)found.push('hora');if(saida)found.push('saída');if(destino)found.push('destino');if(voo)found.push('voo');if(valor)found.push('valor');if(motorista)found.push('motorista');
-  e('parse-result').innerHTML=found.length?'<span style="color:var(--g2)">✓ Encontrado: '+found.join(', ')+'</span>':'<span style="color:var(--red)">Não encontrei dados.</span>';
+  const found=[];if(data)found.push('data');if(hora)found.push('hora');if(saida)found.push('saida');if(destino)found.push('destino');if(voo)found.push('voo');if(valor)found.push('valor');if(motorista)found.push('motorista');
+  e('parse-result').innerHTML=found.length?'<span style="color:#2ECC71">Encontrado: '+found.join(', ')+'</span>':'<span style="color:var(--red)">Sem dados.</span>';
 }
 
-// FILTERS
 function getFiltered(){
   const mes=e('fil-mes').value,mot=e('fil-motorista').value,pag=e('fil-pago').value,src=e('fil-src').value;
   const srch=(e('fil-search').value||'').toLowerCase();
@@ -914,11 +806,7 @@ function getFiltered(){
 }
 
 function getDrColor(n){const m=motoristas.find(d=>d.nome===n)||guias.find(d=>d.nome===n);return m?m.cor:'#999';}
-
-function badgeClass(p){
-  const m={'Pago':'b-pago','Falta':'b-falta','MB Way':'b-mbway','Link':'b-link','SumUp':'b-sumup','Voucher':'b-voucher','Crédito Carla':'b-credito','Crédito P.Reflexo':'b-credito'};
-  return m[p]||'b-falta';
-}
+function badgeClass(p){return({'Pago':'b-pago','Falta':'b-falta','MB Way':'b-mbway','Link':'b-link','SumUp':'b-sumup','Voucher':'b-voucher','Credito Carla':'b-credito','Credito P.Reflexo':'b-credito'})[p]||'b-falta';}
 
 function renderTable(){
   const data=getFiltered();
@@ -926,35 +814,34 @@ function renderTable(){
   if(!data.length){e('tbody').innerHTML='';return;}
   e('tbody').innerHTML=data.map(s=>{
     const dc=getDrColor(s.motorista),gc=getDrColor(s.guia);
-    const tc=s.tipo.includes('IN')?'#185FA5':s.tipo.includes('OUT')?'#A32D2D':s.tipo==='Guia'?'#534AB7':'#3B6D11';
+    const tc=s.tipo.includes('IN')?'#185FA5':s.tipo.includes('OUT')?'#A32D2D':'#3B6D11';
     const val=fmtN(s.valor),par=fmtN(s.parceiro),com=fmtN(s.comissao),pct=fmtN(s.pct)||100;
     const rec=val*(pct/100),emFalta=val-rec,margem=rec-par-com;
     const saidaReal=s.saida==='Outro / Morada'?s.saidaLivre:s.saida;
-    const rota=(saidaReal||s.destino)?(saidaReal||'?')+' → '+(s.destino||'?'):'—';
-    const cal=s.calEventId?'<span style="color:#4285F4;font-size:9px;font-weight:700">✓Cal</span>':'<button class="btn sm blue" onclick="addToCalendar(\''+s.id+'\')">+Cal</button>';
-    return '<tr>'
-      +'<td><input type="checkbox" class="chk-row" data-id="'+s.id+'"></td>'
-      +'<td>'+s.data+'</td><td>'+(s.hora||'—')+'</td>'
+    const rota=(saidaReal||s.destino)?(saidaReal||'?')+' > '+(s.destino||'?'):'--';
+    const cal=s.calEventId?'<span style="color:#4285F4;font-size:9px;font-weight:700">Cal OK</span>':'<button class="btn sm blue" onclick="addToCalendar(\''+s.id+'\')">+Cal</button>';
+    return '<tr><td><input type="checkbox" class="chk-row" data-id="'+s.id+'"></td>'
+      +'<td>'+s.data+'</td><td>'+(s.hora||'--')+'</td>'
       +'<td style="color:'+tc+';font-weight:700;white-space:nowrap">'+s.tipo+'</td>'
       +'<td><span class="src-tag">'+s.src+'</span></td>'
-      +'<td style="max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+(s.agencia||'—')+'</td>'
+      +'<td style="max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+(s.agencia||'--')+'</td>'
       +'<td style="font-size:10px;max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="'+rota+'">'+rota+'</td>'
-      +'<td style="font-size:10px;color:#888;white-space:nowrap">'+(s.voo||'—')+'</td>'
-      +'<td><span class="chip"><span class="dot" style="background:'+dc+'"></span>'+(s.motorista||'—')+'</span></td>'
-      +'<td>'+(s.guia?'<span class="chip guia"><span class="dot" style="background:'+gc+'"></span>'+s.guia+'</span>':'—')+'</td>'
-      +'<td style="font-weight:700">'+(val?'€'+val.toFixed(2):'—')+'</td>'
-      +'<td>'+(par?'€'+par.toFixed(2):'—')+'</td>'
-      +'<td class="'+(margem>=0?'m-pos':'m-neg')+'">€'+margem.toFixed(2)+'</td>'
-      +'<td>'+(com?'€'+com.toFixed(2):'—')+'</td>'
-      +'<td>'+(pct<100?pct+'%':'✓')+'</td>'
-      +'<td>'+(rec?'€'+rec.toFixed(2):'—')+'</td>'
-      +'<td style="color:var(--red)">'+(emFalta>0.01?'€'+emFalta.toFixed(2):'—')+'</td>'
-      +'<td>'+(fmtN(s.voucher)?'€'+fmtN(s.voucher).toFixed(2):'—')+'</td>'
-      +'<td>'+(fmtN(s.tip)?'€'+fmtN(s.tip).toFixed(2):'—')+'</td>'
-      +'<td><span class="badge '+badgeClass(s.pago)+'" onclick="togglePago(\''+s.id+'\')" title="Clica para alternar">'+s.pago+'</span></td>'
+      +'<td style="font-size:10px;color:#888;white-space:nowrap">'+(s.voo||'--')+'</td>'
+      +'<td><span class="chip"><span class="dot" style="background:'+dc+'"></span>'+(s.motorista||'--')+'</span></td>'
+      +'<td>'+(s.guia?'<span class="chip guia"><span class="dot" style="background:'+gc+'"></span>'+s.guia+'</span>':'--')+'</td>'
+      +'<td style="font-weight:700">'+(val?'E'+val.toFixed(2):'--')+'</td>'
+      +'<td>'+(par?'E'+par.toFixed(2):'--')+'</td>'
+      +'<td class="'+(margem>=0?'m-pos':'m-neg')+'">E'+margem.toFixed(2)+'</td>'
+      +'<td>'+(com?'E'+com.toFixed(2):'--')+'</td>'
+      +'<td>'+(pct<100?pct+'%':'OK')+'</td>'
+      +'<td>'+(rec?'E'+rec.toFixed(2):'--')+'</td>'
+      +'<td style="color:var(--red)">'+(emFalta>0.01?'E'+emFalta.toFixed(2):'--')+'</td>'
+      +'<td>'+(fmtN(s.voucher)?'E'+fmtN(s.voucher).toFixed(2):'--')+'</td>'
+      +'<td>'+(fmtN(s.tip)?'E'+fmtN(s.tip).toFixed(2):'--')+'</td>'
+      +'<td><span class="badge '+badgeClass(s.pago)+'" onclick="togglePago(\''+s.id+'\')">'+s.pago+'</span></td>'
       +'<td>'+cal+'</td>'
-      +'<td><button class="btn sm" onclick="openEdit(\''+s.id+'\')" title="Editar">✏️</button></td>'
-      +'<td><button class="btn sm red" onclick="deleteServico(\''+s.id+'\')" title="Remover">✕</button></td>'
+      +'<td><button class="btn sm" onclick="openEdit(\''+s.id+'\')">Edit</button></td>'
+      +'<td><button class="btn sm red" onclick="deleteServico(\''+s.id+'\')">X</button></td>'
       +'</tr>';
   }).join('');
 }
@@ -963,17 +850,17 @@ function renderCards(){
   const tot=servicos.reduce((a,s)=>a+fmtN(s.valor),0);
   const rec=servicos.reduce((a,s)=>a+fmtN(s.valor)*(fmtN(s.pct)||100)/100,0);
   const emF=tot-rec,parc=servicos.reduce((a,s)=>a+fmtN(s.parceiro),0);
-  const com=servicos.reduce((a,s)=>a+fmtN(s.comissao),0),vouc=servicos.reduce((a,s)=>a+fmtN(s.voucher),0);
+  const com=servicos.reduce((a,s)=>a+fmtN(s.comissao),0);
   const tips=servicos.reduce((a,s)=>a+fmtN(s.tip),0),margem=rec-parc-com;
   e('cards-resumo').innerHTML=
-    '<div class="card"><div class="card-label">Serviços</div><div class="card-value">'+servicos.length+'</div></div>'
-    +'<div class="card"><div class="card-label">Faturado</div><div class="card-value green">€'+tot.toFixed(2)+'</div></div>'
-    +'<div class="card"><div class="card-label">Recebido</div><div class="card-value green">€'+rec.toFixed(2)+'</div></div>'
-    +'<div class="card"><div class="card-label">Em Falta</div><div class="card-value red">€'+emF.toFixed(2)+'</div></div>'
-    +'<div class="card"><div class="card-label">Parceiros</div><div class="card-value amb">€'+parc.toFixed(2)+'</div></div>'
-    +'<div class="card"><div class="card-label">Comissões</div><div class="card-value amb">€'+com.toFixed(2)+'</div></div>'
-    +'<div class="card"><div class="card-label">Margem</div><div class="card-value '+(margem>=0?'green':'red')+'">€'+margem.toFixed(2)+'</div></div>'
-    +'<div class="card"><div class="card-label">Tips</div><div class="card-value blue">€'+tips.toFixed(2)+'</div></div>';
+    '<div class="card"><div class="card-label">Servicos</div><div class="card-value">'+servicos.length+'</div></div>'
+    +'<div class="card"><div class="card-label">Faturado</div><div class="card-value green">E'+tot.toFixed(2)+'</div></div>'
+    +'<div class="card"><div class="card-label">Recebido</div><div class="card-value green">E'+rec.toFixed(2)+'</div></div>'
+    +'<div class="card"><div class="card-label">Em Falta</div><div class="card-value red">E'+emF.toFixed(2)+'</div></div>'
+    +'<div class="card"><div class="card-label">Parceiros</div><div class="card-value amb">E'+parc.toFixed(2)+'</div></div>'
+    +'<div class="card"><div class="card-label">Comissoes</div><div class="card-value amb">E'+com.toFixed(2)+'</div></div>'
+    +'<div class="card"><div class="card-label">Margem</div><div class="card-value '+(margem>=0?'green':'red')+'">E'+margem.toFixed(2)+'</div></div>'
+    +'<div class="card"><div class="card-label">Tips</div><div class="card-value blue">E'+tips.toFixed(2)+'</div></div>';
 }
 
 function renderFinanceiro(){
@@ -981,226 +868,230 @@ function renderFinanceiro(){
   const rec=servicos.reduce((a,s)=>a+fmtN(s.valor)*(fmtN(s.pct)||100)/100,0);
   const emF=tot-rec,parc=servicos.reduce((a,s)=>a+fmtN(s.parceiro),0);
   const com=servicos.reduce((a,s)=>a+fmtN(s.comissao),0);
+  const tips=servicos.reduce((a,s)=>a+fmtN(s.tip),0),margem=rec-parc-com;
   e('cards-fin').innerHTML=
-    '<div class="card"><div class="card-label">Total</div><div class="card-value green">€'+tot.toFixed(2)+'</div></div>'
-    +'<div class="card"><div class="card-label">Recebido</div><div class="card-value green">€'+rec.toFixed(2)+'</div></div>'
-    +'<div class="card"><div class="card-label">Em Falta</div><div class="card-value red">€'+emF.toFixed(2)+'</div></div>'
-    +'<div class="card"><div class="card-label">Parceiros</div><div class="card-value amb">€'+parc.toFixed(2)+'</div></div>'
-    +'<div class="card"><div class="card-label">Comissões</div><div class="card-value amb">€'+com.toFixed(2)+'</div></div>';
+    '<div class="card"><div class="card-label">Total Faturado</div><div class="card-value green">E'+tot.toFixed(2)+'</div></div>'
+    +'<div class="card"><div class="card-label">Recebido</div><div class="card-value green">E'+rec.toFixed(2)+'</div></div>'
+    +'<div class="card"><div class="card-label">Em Falta</div><div class="card-value red">E'+emF.toFixed(2)+'</div></div>'
+    +'<div class="card"><div class="card-label">Parceiros</div><div class="card-value amb">E'+parc.toFixed(2)+'</div></div>'
+    +'<div class="card"><div class="card-label">CARLA EUR (com)</div><div class="card-value amb">E'+com.toFixed(2)+'</div></div>'
+    +'<div class="card"><div class="card-label">Tips</div><div class="card-value blue">E'+tips.toFixed(2)+'</div></div>'
+    +'<div class="card"><div class="card-label">Margem Liquida</div><div class="card-value '+(margem>=0?'green':'red')+'">E'+margem.toFixed(2)+'</div></div>';
 
   // Em falta por origem
-  const SRCS=['Agência','Carla','Ponto Reflexo','Site','WhatsApp','Parceiro Externo','Uber','Bolt'];
-  let fHtml='<div class="sr" style="font-weight:700;font-size:10px;color:#555"><span>Origem</span><span>Em Falta / Total</span></div>';
-  let totalGeral=0;
+  const SRCS=['Agencia','Carla','Ponto Reflexo','Site','WhatsApp','Parceiro Externo','Uber','Bolt'];
+  let fHtml='';let totalGeral=0;
   SRCS.forEach(src=>{
-    const itens=servicos.filter(s=>s.src===src);
-    const totalSrc=itens.reduce((a,s)=>a+fmtN(s.valor),0);
-    const recSrc=itens.reduce((a,s)=>a+fmtN(s.valor)*(fmtN(s.pct)||100)/100,0);
-    const faltaSrc=totalSrc-recSrc;totalGeral+=faltaSrc;
-    if(totalSrc>0)fHtml+='<div class="sr"><span><span class="src-tag">'+src+'</span> ('+itens.length+')</span><span><span style="color:var(--red);font-weight:700">€'+faltaSrc.toFixed(2)+'</span> / €'+totalSrc.toFixed(2)+'</span></div>';
+    const it=servicos.filter(s=>s.src===src);
+    const tSrc=it.reduce((a,s)=>a+fmtN(s.valor),0);
+    const rSrc=it.reduce((a,s)=>a+fmtN(s.valor)*(fmtN(s.pct)||100)/100,0);
+    const fSrc=tSrc-rSrc;totalGeral+=fSrc;
+    if(tSrc>0)fHtml+='<div class="sr"><span><span class="src-tag">'+src+'</span> ('+it.length+')</span><span><span style="color:var(--red);font-weight:700">E'+fSrc.toFixed(2)+'</span> / E'+tSrc.toFixed(2)+'</span></div>';
   });
-  fHtml+='<div class="sr"><span><strong>TOTAL em falta</strong></span><span style="color:var(--red);font-weight:700">€'+totalGeral.toFixed(2)+'</span></div>';
+  fHtml+='<div class="sr"><span><strong>TOTAL em falta</strong></span><span style="color:var(--red);font-weight:700">E'+totalGeral.toFixed(2)+'</span></div>';
   e('fin-falta-src').innerHTML=fHtml;
 
-  // Carla resumo mensal
+  // Carla: CARLA EUR | CARLA VCH | CARLA % | LIQUIDO (igual ao Sheets)
   let carlaHtml='';
-  const byMesCarla={};
+  const byMC={};
   servicos.filter(s=>s.src==='Carla').forEach(s=>{
     const m=s.data.substring(5,7);
-    if(!byMesCarla[m])byMesCarla[m]={vouc:0,com:0,n:0};
-    byMesCarla[m].vouc+=fmtN(s.valor);byMesCarla[m].com+=fmtN(s.comissao);byMesCarla[m].n++;
+    if(!byMC[m])byMC[m]={eur:0,vch:0,pct:0,n:0};
+    byMC[m].eur+=fmtN(s.valor);      // CARLA EUR = total facturado via Carla
+    byMC[m].vch+=fmtN(s.voucher);   // CARLA VCH = vouchers
+    byMC[m].pct+=fmtN(s.comissao);  // CARLA % = comissoes
+    byMC[m].n++;
   });
-  if(Object.keys(byMesCarla).length){
-    carlaHtml='<div class="sr" style="font-weight:600;font-size:10px;color:#555"><span>Mês</span><span>Vouchers</span><span>Comissões</span><span>Líquido</span></div>';
-    let totV=0,totC=0;
-    Object.keys(byMesCarla).sort().forEach(m=>{
-      const d=byMesCarla[m],liq=d.vouc-d.com;totV+=d.vouc;totC+=d.com;
-      carlaHtml+='<div class="sr"><span>'+MESES[parseInt(m)-1]+' ('+d.n+')</span><span>€'+d.vouc.toFixed(2)+'</span><span style="color:var(--red)">-€'+d.com.toFixed(2)+'</span><span class="'+(liq>=0?'m-pos':'m-neg')+'">€'+liq.toFixed(2)+'</span></div>';
+  if(Object.keys(byMC).length){
+    carlaHtml='<div class="sr" style="font-weight:700;font-size:9px;color:var(--gold)"><span>Mes</span><span>CARLA EUR</span><span>CARLA VCH</span><span>CARLA %</span><span>LIQUIDO</span></div>';
+    let tE=0,tV=0,tP=0;
+    Object.keys(byMC).sort().forEach(m=>{
+      const d=byMC[m],liq=d.eur-d.pct;tE+=d.eur;tV+=d.vch;tP+=d.pct;
+      carlaHtml+='<div class="sr"><span>'+MESES[parseInt(m)-1]+' ('+d.n+')</span><span>E'+d.eur.toFixed(2)+'</span><span>E'+d.vch.toFixed(2)+'</span><span style="color:var(--red)">-E'+d.pct.toFixed(2)+'</span><span class="'+(liq>=0?'m-pos':'m-neg')+'">E'+liq.toFixed(2)+'</span></div>';
     });
-    const totLiq=totV-totC;
-    carlaHtml+='<div class="sr"><span><strong>TOTAL</strong></span><span><strong>€'+totV.toFixed(2)+'</strong></span><span style="color:var(--red)"><strong>-€'+totC.toFixed(2)+'</strong></span><span class="'+(totLiq>=0?'m-pos':'m-neg')+'"><strong>€'+totLiq.toFixed(2)+'</strong></span></div>';
-    if(totLiq>=0)carlaHtml+='<p style="font-size:10px;color:var(--g2);margin-top:6px">✓ A Carla paga-te €'+totLiq.toFixed(2)+'</p>';
-    else carlaHtml+='<p style="font-size:10px;color:var(--red);margin-top:6px">⚠️ Pagas à Carla €'+Math.abs(totLiq).toFixed(2)+'</p>';
-  }else{
-    carlaHtml='<p style="color:#999;font-size:11px">Sem serviços Carla.</p>';
-  }
+    const totLiq=tE-tP;
+    carlaHtml+='<div class="sr"><span><strong>TOTAL</strong></span><span><strong>E'+tE.toFixed(2)+'</strong></span><span><strong>E'+tV.toFixed(2)+'</strong></span><span style="color:var(--red)"><strong>-E'+tP.toFixed(2)+'</strong></span><span class="'+(totLiq>=0?'m-pos':'m-neg')+'"><strong>E'+totLiq.toFixed(2)+'</strong></span></div>';
+    carlaHtml+='<p style="font-size:10px;color:'+(totLiq>=0?'#2ECC71':'var(--red)')+';margin-top:6px">'+(totLiq>=0?'Carla paga-te':'Pagas a Carla')+' E'+Math.abs(totLiq).toFixed(2)+'</p>';
+  }else{carlaHtml='<p style="color:#999;font-size:11px">Sem servicos Carla.</p>';}
   e('fin-carla').innerHTML=carlaHtml;
 
-  // Por mês
   const byMes={};servicos.forEach(s=>{const m=s.data.substring(5,7);if(!byMes[m])byMes[m]={tot:0,n:0};byMes[m].tot+=fmtN(s.valor);byMes[m].n++;});
-  e('fin-mes').innerHTML=Object.keys(byMes).sort().map(m=>'<div class="sr"><span>'+MESES[parseInt(m)-1]+' ('+byMes[m].n+')</span><span style="color:var(--g2)">€'+byMes[m].tot.toFixed(2)+'</span></div>').join('')
-    +(Object.keys(byMes).length?'<div class="sr"><span>TOTAL</span><span>€'+tot.toFixed(2)+'</span></div>':'<p style="color:#999;font-size:11px">Sem dados</p>');
+  e('fin-mes').innerHTML=Object.keys(byMes).sort().map(m=>'<div class="sr"><span>'+MESES[parseInt(m)-1]+' ('+byMes[m].n+')</span><span style="color:#2ECC71">E'+byMes[m].tot.toFixed(2)+'</span></div>').join('')||'<p style="color:#999;font-size:11px">Sem dados</p>';
 
-  // Por motorista
-  const byDrv={};servicos.forEach(s=>{const d=s.motorista||'—';if(!byDrv[d])byDrv[d]={tot:0,n:0};byDrv[d].tot+=fmtN(s.valor);byDrv[d].n++;});
-  e('fin-driver').innerHTML=Object.keys(byDrv).sort().map(d=>{const dc=getDrColor(d);
-    return '<div class="sr"><span><span class="dot" style="background:'+dc+';margin-right:3px"></span>'+d+' ('+byDrv[d].n+')</span><span>€'+byDrv[d].tot.toFixed(2)+'</span></div>';
-  }).join('')||'<p style="color:#999;font-size:11px">Sem dados</p>';
+  const byDrv={};servicos.forEach(s=>{const d=s.motorista||'--';if(!byDrv[d])byDrv[d]={tot:0,n:0};byDrv[d].tot+=fmtN(s.valor);byDrv[d].n++;});
+  e('fin-driver').innerHTML=Object.keys(byDrv).sort().map(d=>'<div class="sr"><span><span class="dot" style="background:'+getDrColor(d)+';margin-right:3px"></span>'+d+' ('+byDrv[d].n+')</span><span>E'+byDrv[d].tot.toFixed(2)+'</span></div>').join('')||'<p style="color:#999;font-size:11px">Sem dados</p>';
 
-  // Paulo
   if(pauloData){
-    const divida=10300;let totalPago=0;
+    const divida=10300;let tp=0;
     const rows=pauloData.filter(r=>r[0]&&r[0]!=='DIVIDA_INICIAL');
-    rows.forEach(r=>{totalPago+=fmtN(r[1]);});
-    const saldo=divida-totalPago;
-    let ph='<div class="sr"><span>Dívida inicial</span><span style="color:var(--red)">€'+divida.toFixed(2)+'</span></div>';
-    rows.forEach(r=>{if(fmtN(r[1])>0)ph+='<div class="sr"><span>'+r[0]+'</span><span>€'+fmtN(r[1]).toFixed(2)+'</span></div>';});
-    ph+='<div class="sr"><span>Total pago</span><span style="color:var(--g2)">€'+totalPago.toFixed(2)+'</span></div>';
-    ph+='<div class="sr"><span>Saldo em falta</span><span style="color:var(--red)">€'+saldo.toFixed(2)+'</span></div>';
-    ph+='<p style="font-size:9px;color:#bbb;margin-top:5px">Edita na aba "Paulo2026" da Google Sheet e clica ↻.</p>';
+    rows.forEach(r=>{tp+=fmtN(r[1]);});const saldo=divida-tp;
+    let ph='<div class="sr"><span>Divida inicial</span><span style="color:var(--red)">E'+divida.toFixed(2)+'</span></div>';
+    rows.forEach(r=>{if(fmtN(r[1])>0)ph+='<div class="sr"><span>'+r[0]+'</span><span>E'+fmtN(r[1]).toFixed(2)+'</span></div>';});
+    ph+='<div class="sr"><span>Total pago</span><span style="color:#2ECC71">E'+tp.toFixed(2)+'</span></div>';
+    ph+='<div class="sr"><span>Saldo em falta</span><span style="color:var(--red)">E'+saldo.toFixed(2)+'</span></div>';
     e('fin-paulo').innerHTML=ph;
-  }else{e('fin-paulo').innerHTML='<p style="color:#999;font-size:11px">Clica ↻ para carregar.</p>';}
+  }else{e('fin-paulo').innerHTML='<p style="color:#999;font-size:11px">Clica Refresh para carregar.</p>';}
 
-  // Ponto Reflexo lista
   renderPontoReflexo();
 }
 
 function renderPontoReflexo(){
-  const prServicos=servicos.filter(s=>s.src==='Ponto Reflexo').sort((a,b)=>a.data.localeCompare(b.data));
-  if(!prServicos.length){
-    if(e('pr-lista'))e('pr-lista').innerHTML='<p style="color:#999;font-size:11px">Sem serviços Ponto Reflexo.</p>';
-    return;
-  }
-  // Group by payment period (1-15 / 16-end)
+  const prS=servicos.filter(s=>s.src==='Ponto Reflexo').sort((a,b)=>a.data.localeCompare(b.data));
+  if(!prS.length){if(e('pr-lista'))e('pr-lista').innerHTML='<p style="color:#999;font-size:11px">Sem servicos Ponto Reflexo.</p>';return;}
   let html='';
-  prServicos.forEach(s=>{
+  prS.forEach(s=>{
     const dia=parseInt(s.data.substring(8));
-    const periodo=dia<=15?'Pagamento dia 15':'Pagamento dia 30';
-    const pago=s.pago==='Pago'||s.pago==='MB Way'||s.pago==='SumUp';
-    html+='<div class="pr-item">'
-      +'<span style="flex:1;font-size:11px">'+s.data+' — '+(s.destino||s.saida||'?')+'</span>'
-      +'<span style="font-size:10px;color:#888;margin-right:8px">'+periodo+'</span>'
-      +'<span style="font-weight:700;margin-right:8px">€'+fmtN(s.valor).toFixed(2)+'</span>'
-      +'<span class="badge '+(pago?'b-pago':'b-falta')+'" onclick="togglePago(\''+s.id+'\')">'+(pago?'Pago':'Falta')+'</span>'
-      +'</div>';
+    const pago=['Pago','MB Way','SumUp'].includes(s.pago);
+    html+='<div class="pr-item"><span style="flex:1;font-size:11px">'+s.data+' -- '+(s.destino||s.saida||'?')+'</span>'
+      +'<span style="font-size:10px;color:#888;margin-right:8px">'+(dia<=15?'dia 15':'dia 30')+'</span>'
+      +'<span style="font-weight:700;margin-right:8px">E'+fmtN(s.valor).toFixed(2)+'</span>'
+      +'<span class="badge '+(pago?'b-pago':'b-falta')+'" onclick="togglePago(\''+s.id+'\')">'+(pago?'Pago':'Falta')+'</span></div>';
   });
-  const totalPR=prServicos.reduce((a,s)=>a+fmtN(s.valor),0);
-  const pagoPR=prServicos.filter(s=>s.pago==='Pago'||s.pago==='MB Way'||s.pago==='SumUp').reduce((a,s)=>a+fmtN(s.valor),0);
+  const tPR=prS.reduce((a,s)=>a+fmtN(s.valor),0);
+  const pPR=prS.filter(s=>['Pago','MB Way','SumUp'].includes(s.pago)).reduce((a,s)=>a+fmtN(s.valor),0);
   if(e('pr-lista'))e('pr-lista').innerHTML=html;
-  if(e('pr-resumo'))e('pr-resumo').innerHTML='Total: <strong>€'+totalPR.toFixed(2)+'</strong> | Recebido: <strong style="color:var(--g2)">€'+pagoPR.toFixed(2)+'</strong> | Em falta: <strong style="color:var(--red)">€'+(totalPR-pagoPR).toFixed(2)+'</strong>';
+  if(e('pr-resumo'))e('pr-resumo').innerHTML='Total: <strong>E'+tPR.toFixed(2)+'</strong> | Recebido: <strong style="color:#2ECC71">E'+pPR.toFixed(2)+'</strong> | Em falta: <strong style="color:var(--red)">E'+(tPR-pPR).toFixed(2)+'</strong>';
 }
 
-// ANUAL
+// ANUAL - colunas identicas ao Sheets
+function getMesKey(mi){return MESES_KEY[mi];}
+
 function renderAnual(){
-  const ANUAL_CAMPOS=['PandaTour','Parceiros','Carla VCH','Carla %','Carla Líq','Ponto Reflexo','Tips','Uber','Bolt','Total Receitas','Total Despesas','Líquido'];
-  let html='<thead><tr><th>Mês</th>'+ANUAL_CAMPOS.map(c=>'<th>'+c+'</th>').join('')+'</tr></thead><tbody>';
-  let totals={};ANUAL_CAMPOS.forEach(c=>{totals[c]=0;});
-  const desp_map={'01':'JANEIRO','02':'FEVEREIRO','03':'MARCO','04':'ABRIL','05':'MAIO','06':'JUNHO','07':'JULHO','08':'AGOSTO','09':'SETEMBRO','10':'OUTUBRO','11':'NOVEMBRO','12':'DEZEMBRO'};
+  let html='<thead><tr><th>Mes</th>'+ANUAL_COLS.map(c=>'<th>'+(c.edit?'<span style="color:rgba(201,168,76,.6)">&#9998;</span> ':'')+c.label+'</th>').join('')+'</tr></thead><tbody>';
+  const totals={};ANUAL_COLS.forEach(c=>{totals[c.k]=0;});
 
   for(let mi=0;mi<12;mi++){
     const m=(mi+1).toString().padStart(2,'0');
-    const mServ=servicos.filter(s=>s.data.startsWith('2026-'+m));
-    const pt=mServ.reduce((a,s)=>a+fmtN(s.valor),0);
-    const parc=mServ.reduce((a,s)=>a+fmtN(s.parceiro),0);
-    const carlaVCH=mServ.filter(s=>s.src==='Carla').reduce((a,s)=>a+fmtN(s.valor),0);
-    const carlaPct=mServ.filter(s=>s.src==='Carla').reduce((a,s)=>a+fmtN(s.comissao),0);
-    const carlaLiq=carlaVCH-carlaPct;
-    const pr=mServ.filter(s=>s.src==='Ponto Reflexo').reduce((a,s)=>a+fmtN(s.valor),0);
-    const tips=mServ.reduce((a,s)=>a+fmtN(s.tip),0);
-    const ad=anualData[desp_map[m]]||{};
-    const uber=fmtN(ad.uber);const bolt=fmtN(ad.bolt);
-    const totRec=pt+uber+bolt+tips;
-    const despMes=despesasData[desp_map[m]]||{};
-    const totDesp=Object.values(despMes).reduce((a,v)=>a+v,0);
+    const mKey=getMesKey(mi);
+    const mS=servicos.filter(s=>s.data.startsWith('2026-'+m));
+
+    // Calculados
+    const pt=mS.reduce((a,s)=>a+fmtN(s.valor),0);
+    const parc=mS.reduce((a,s)=>a+fmtN(s.parceiro),0);
+    const cS=mS.filter(s=>s.src==='Carla');
+    const carlaEur=cS.reduce((a,s)=>a+fmtN(s.valor),0);  // CARLA EUR = total via Carla
+    const carlaVCH=cS.reduce((a,s)=>a+fmtN(s.voucher),0); // CARLA VCH
+    const carlaPct=cS.reduce((a,s)=>a+fmtN(s.comissao),0);// CARLA %
+    const liqCarla=carlaEur-carlaPct;
+    const tips=mS.reduce((a,s)=>a+fmtN(s.tip),0);
+
+    // Editaveis da sheet
+    const ad=anualData[mKey]||{};
+    const pdtour=fmtN(ad.pdtour);
+    const uber=fmtN(ad.uber);
+    const bolt=fmtN(ad.bolt);
+
+    // Totais
+    const totRec=pt+uber+bolt+pdtour+tips;
+    const despM=despesasData[mKey]||{};
+    const totDesp=DESP_CAMPOS.reduce((a,c)=>a+fmtN(despM[c]),0);
     const liq=totRec-totDesp;
 
-    const vals={PandaTour:pt,Parceiros:parc,'Carla VCH':carlaVCH,'Carla %':carlaPct,'Carla Líq':carlaLiq,'Ponto Reflexo':pr,Tips:tips,Uber:uber,Bolt:bolt,'Total Receitas':totRec,'Total Despesas':totDesp,Líquido:liq};
-    ANUAL_CAMPOS.forEach(c=>{totals[c]+=vals[c]||0;});
+    const vals={pt,parc,carlaEur,carlaVCH,carlaPct,liqCarla,tips,pdtour,uber,bolt,totRec,totDesp,liq};
+    ANUAL_COLS.forEach(c=>{totals[c.k]=(totals[c.k]||0)+(vals[c.k]||0);});
 
-    html+='<tr><td>'+MESES_S[mi]+'</td>'+ANUAL_CAMPOS.map(c=>{
-      const v=vals[c]||0;
-      const isLiq=c==='Líquido';const isDesp=c==='Total Despesas'||c==='Carla %'||c==='Parceiros';
-      const cls=isLiq?(v>=0?'pos':'neg'):(isDesp?'neg':'');
-      return '<td class="'+cls+'">'+(v?'€'+v.toFixed(2):'—')+'</td>';
+    html+='<tr><td>'+MESES_S[mi]+'</td>'+ANUAL_COLS.map(c=>{
+      const v=vals[c.k]||0;
+      const isLiq=c.k==='liq'||c.k==='liqCarla';
+      const cls=isLiq?(v>=0?'pos':'neg'):(c.neg?'neg':'');
+      if(c.edit){
+        return '<td style="padding:2px 4px"><input type="number" step="0.01" value="'+(v||0).toFixed(2)+'" onchange="setAnualEdit(\''+mKey+'\',\''+c.k+'\',this.value)" title="Editavel - guarda no Sheets"></td>';
+      }
+      return '<td class="'+cls+'">'+(v?'E'+v.toFixed(2):'-')+'</td>';
     }).join('')+'</tr>';
   }
-  html+='<tr><td>TOTAL</td>'+ANUAL_CAMPOS.map(c=>{
-    const v=totals[c]||0;const isLiq=c==='Líquido';
+
+  html+='<tr><td>TOTAIS</td>'+ANUAL_COLS.map(c=>{
+    const v=totals[c.k]||0;
+    const isLiq=c.k==='liq'||c.k==='liqCarla';
     const cls=isLiq?(v>=0?'pos':'neg'):'';
-    return '<td class="'+cls+'"><strong>'+(v?'€'+v.toFixed(2):'€0.00')+'</strong></td>';
-  }).join('')+'</tr>';
-  html+='</tbody>';
+    return '<td class="'+cls+'"><strong>'+(v?'E'+v.toFixed(2):'E0.00')+'</strong></td>';
+  }).join('')+'</tr></tbody>';
   e('anual-table').innerHTML=html;
 
-  const totRec=totals['Total Receitas'],totDesp=totals['Total Despesas'],totLiq=totals['Líquido'];
+  const {pt,parc,uber,bolt,pdtour,tips,totRec,totDesp,liq,liqCarla}=
+    ANUAL_COLS.reduce((o,c)=>{o[c.k]=totals[c.k]||0;return o;},{});
   e('cards-anual').innerHTML=
-    '<div class="card"><div class="card-label">Total Faturado</div><div class="card-value green">€'+totals['PandaTour'].toFixed(2)+'</div></div>'
-    +'<div class="card"><div class="card-label">Total Receitas</div><div class="card-value green">€'+totRec.toFixed(2)+'</div></div>'
-    +'<div class="card"><div class="card-label">Total Despesas</div><div class="card-value red">€'+totDesp.toFixed(2)+'</div></div>'
-    +'<div class="card"><div class="card-label">Líquido Anual</div><div class="card-value '+(totLiq>=0?'green':'red')+'">€'+totLiq.toFixed(2)+'</div></div>'
-    +'<div class="card"><div class="card-label">Carla Líquido</div><div class="card-value '+(totals['Carla Líq']>=0?'green':'red')+'">€'+totals['Carla Líq'].toFixed(2)+'</div></div>'
-    +'<div class="card"><div class="card-label">Tips</div><div class="card-value blue">€'+totals['Tips'].toFixed(2)+'</div></div>';
+    '<div class="card"><div class="card-label">PandaTour</div><div class="card-value green">E'+pt.toFixed(2)+'</div></div>'
+    +'<div class="card"><div class="card-label">PDTOUR-DADOS</div><div class="card-value blue">E'+pdtour.toFixed(2)+'</div></div>'
+    +'<div class="card"><div class="card-label">UBER</div><div class="card-value blue">E'+uber.toFixed(2)+'</div></div>'
+    +'<div class="card"><div class="card-label">BOLT</div><div class="card-value blue">E'+bolt.toFixed(2)+'</div></div>'
+    +'<div class="card"><div class="card-label">Total Receitas</div><div class="card-value green">E'+totRec.toFixed(2)+'</div></div>'
+    +'<div class="card"><div class="card-label">Total Despesas</div><div class="card-value red">E'+totDesp.toFixed(2)+'</div></div>'
+    +'<div class="card"><div class="card-label">LIQUIDO</div><div class="card-value '+(liq>=0?'green':'red')+'">E'+liq.toFixed(2)+'</div></div>'
+    +'<div class="card"><div class="card-label">LIQUIDO Carla</div><div class="card-value '+(liqCarla>=0?'green':'red')+'">E'+liqCarla.toFixed(2)+'</div></div>'
+    +'<div class="card"><div class="card-label">TIPS GERAIS</div><div class="card-value blue">E'+tips.toFixed(2)+'</div></div>';
+}
+
+function setAnualEdit(mKey,field,val){
+  if(!anualData[mKey])anualData[mKey]={pdtour:'0',uber:'0',bolt:'0'};
+  anualData[mKey][field]=val;
+  // Update totals row only - avoid full re-render to preserve input focus
+  renderAnual();
 }
 
 async function saveAnual(){
-  // Anual data (Uber/Bolt editable) saved as JSON in sheet
-  showSync('A guardar anual...');
+  showSync('A guardar Anual...');
   try{
-    const rows=[['MES','UBER','BOLT']];
-    const mKeys=['JANEIRO','FEVEREIRO','MARCO','ABRIL','MAIO','JUNHO','JULHO','AGOSTO','SETEMBRO','OUTUBRO','NOVEMBRO','DEZEMBRO'];
-    mKeys.forEach(m=>{const d=anualData[m]||{};rows.push([m,d.uber||'0',d.bolt||'0']);});
-    await sheetsReq('PUT','/values/'+AN+'!A1:C13?valueInputOption=RAW',{values:rows});
-    showSync('Anual guardado ✓');setTimeout(()=>e('sync-bar').style.display='none',2000);
+    // Save editables: MES | PDTOUR-DADOS | UBER | BOLT (cols A-D = same order as extra cols in sheet)
+    const rows=[['MES','PDTOUR-DADOS','UBER','BOLT']];
+    MESES_KEY.forEach(mk=>{const d=anualData[mk]||{};rows.push([mk,d.pdtour||'0',d.uber||'0',d.bolt||'0']);});
+    // Write to a safe range that wont overwrite calc cols - using cols A,I,K,L (MES=A, PDTOUR=I, UBER=K, BOLT=L)
+    // Simpler: just write a dedicated section at the end or use same structure as before
+    await sheetsReq('PUT','/values/'+AN+'!A1:D13?valueInputOption=RAW',{values:rows});
+    showSync('Anual guardado');setTimeout(()=>e('sync-bar').style.display='none',2000);
   }catch(err){showSync('Erro: '+err.message);}
 }
 
-// DESPESAS
+// DESPESAS - campos identicos ao Sheets
 function renderDespesas(){
   const mes=e('desp-mes').value;
-  const mKey=['JANEIRO','FEVEREIRO','MARCO','ABRIL','MAIO','JUNHO','JULHO','AGOSTO','SETEMBRO','OUTUBRO','NOVEMBRO','DEZEMBRO'][parseInt(mes)-1];
+  const mKey=MESES_KEY[parseInt(mes)-1];
   const d=despesasData[mKey]||{};
-  e('desp-grid').innerHTML=DESP_CAMPOS.map(c=>`
-    <div class="desp-item">
-      <label>${c}</label>
-      <input type="number" step="0.01" min="0" id="desp-${c.replace(/[^a-z]/gi,'_')}" value="${d[c]||''}" placeholder="0.00" oninput="calcDespTotal()">
-    </div>`).join('');
+  e('desp-grid').innerHTML=DESP_CAMPOS.map(c=>`<div class="desp-item"><label>${c}</label><input type="number" step="0.01" min="0" id="${despKey(c)}" value="${d[c]||''}" placeholder="0.00" oninput="calcDespTotal()"></div>`).join('');
   calcDespTotal();
 }
 
 function calcDespTotal(){
   const mes=e('desp-mes').value;
-  const mKey=['JANEIRO','FEVEREIRO','MARCO','ABRIL','MAIO','JUNHO','JULHO','AGOSTO','SETEMBRO','OUTUBRO','NOVEMBRO','DEZEMBRO'][parseInt(mes)-1];
+  const mKey=MESES_KEY[parseInt(mes)-1];
   let total=0;
   DESP_CAMPOS.forEach(c=>{
-    const el=e('desp-'+c.replace(/[^a-z]/gi,'_'));
-    if(el){const v=fmtN(el.value);total+=v;if(!despesasData[mKey])despesasData[mKey]={};despesasData[mKey][c]=v;}
+    const el=e(despKey(c));if(el){const v=fmtN(el.value);total+=v;if(!despesasData[mKey])despesasData[mKey]={};despesasData[mKey][c]=v;}
   });
-  if(e('desp-total'))e('desp-total').textContent='€'+total.toFixed(2);
+  if(e('desp-total'))e('desp-total').textContent='E'+total.toFixed(2);
 }
 
 async function saveDespesas(){
   showSync('A guardar despesas...');
   try{
-    const mKeys=['JANEIRO','FEVEREIRO','MARCO','ABRIL','MAIO','JUNHO','JULHO','AGOSTO','SETEMBRO','OUTUBRO','NOVEMBRO','DEZEMBRO'];
+    // Header exacto igual ao Sheets
     const rows=[['MES',...DESP_CAMPOS]];
-    mKeys.forEach(m=>{const d=despesasData[m]||{};rows.push([m,...DESP_CAMPOS.map(c=>d[c]||'0')]);});
+    MESES_KEY.forEach(mk=>{const d=despesasData[mk]||{};rows.push([mk,...DESP_CAMPOS.map(c=>d[c]||'0')]);});
     await sheetsReq('PUT','/values/'+DN+'!A1:O13?valueInputOption=RAW',{values:rows});
-    showSync('Despesas guardadas ✓');setTimeout(()=>e('sync-bar').style.display='none',2000);
+    showSync('Despesas guardadas');setTimeout(()=>e('sync-bar').style.display='none',2000);
   }catch(err){showSync('Erro: '+err.message);}
 }
 
 function renderEquipa(){
   renderLegends();
-  const statsMot={};motoristas.forEach(m=>{statsMot[m.nome]={n:0,tot:0,parc:0,pago:0,falta:0};});
-  servicos.forEach(s=>{const d=s.motorista;if(!d||!statsMot[d])return;
+  const sm={};motoristas.forEach(m=>{sm[m.nome]={n:0,tot:0,parc:0,pago:0,falta:0};});
+  servicos.forEach(s=>{const d=s.motorista;if(!d||!sm[d])return;
     const rec=fmtN(s.valor)*(fmtN(s.pct)||100)/100;
-    statsMot[d].n++;statsMot[d].tot+=rec;statsMot[d].parc+=fmtN(s.parceiro);
-    const isPago=['Pago','MB Way','SumUp','Link'].includes(s.pago);
-    if(isPago)statsMot[d].pago++;else statsMot[d].falta++;});
-  e('tbody-motoristas').innerHTML=motoristas.map(m=>{const st=statsMot[m.nome]||{n:0,tot:0,parc:0,pago:0,falta:0};
-    const margem=st.tot-st.parc;
+    sm[d].n++;sm[d].tot+=rec;sm[d].parc+=fmtN(s.parceiro);
+    if(['Pago','MB Way','SumUp','Link'].includes(s.pago))sm[d].pago++;else sm[d].falta++;});
+  e('tbody-motoristas').innerHTML=motoristas.map(m=>{const st=sm[m.nome]||{n:0,tot:0,parc:0,pago:0,falta:0};const mg=st.tot-st.parc;
     return '<tr><td><span class="chip"><span class="dot" style="background:'+m.cor+'"></span>'+m.nome+'</span></td>'
-      +'<td>'+st.n+'</td><td>€'+st.tot.toFixed(2)+'</td><td>€'+st.parc.toFixed(2)+'</td>'
-      +'<td class="'+(margem>=0?'m-pos':'m-neg')+'">€'+margem.toFixed(2)+'</td>'
+      +'<td>'+st.n+'</td><td>E'+st.tot.toFixed(2)+'</td><td>E'+st.parc.toFixed(2)+'</td>'
+      +'<td class="'+(mg>=0?'m-pos':'m-neg')+'">E'+mg.toFixed(2)+'</td>'
       +'<td><span class="badge b-pago">'+st.pago+'</span></td><td><span class="badge b-falta">'+st.falta+'</span></td>'
-      +'<td><button class="btn sm red" onclick="removeMotorista(\''+m.nome+'\')">✕</button></td></tr>';}).join('');
-
-  const statsGui={};guias.forEach(g=>{statsGui[g.nome]={n:0,tot:0};});
-  servicos.forEach(s=>{const g=s.guia;if(!g||!statsGui[g])return;statsGui[g].n++;statsGui[g].tot+=fmtN(s.parceiro);});
-  e('tbody-guias').innerHTML=guias.map(g=>{const st=statsGui[g.nome]||{n:0,tot:0};
+      +'<td><button class="btn sm red" onclick="removeMotorista(\''+m.nome+'\')">X</button></td></tr>';}).join('');
+  const sg={};guias.forEach(g=>{sg[g.nome]={n:0,tot:0};});
+  servicos.forEach(s=>{const g=s.guia;if(!g||!sg[g])return;sg[g].n++;sg[g].tot+=fmtN(s.parceiro);});
+  e('tbody-guias').innerHTML=guias.map(g=>{const st=sg[g.nome]||{n:0,tot:0};
     return '<tr><td><span class="chip guia"><span class="dot" style="background:'+g.cor+'"></span>'+g.nome+'</span></td>'
-      +'<td>'+st.n+'</td><td>€'+st.tot.toFixed(2)+'</td>'
-      +'<td><button class="btn sm red" onclick="removeGuia(\''+g.nome+'\')">✕</button></td></tr>';}).join('');
+      +'<td>'+st.n+'</td><td>E'+st.tot.toFixed(2)+'</td>'
+      +'<td><button class="btn sm red" onclick="removeGuia(\''+g.nome+'\')">X</button></td></tr>';}).join('');
 }
 
 function renderLegends(){
@@ -1216,23 +1107,15 @@ function initSelectValues(selId,opts,val,emptyLabel){
 }
 
 function initAllSelects(){
-  const mNomes=motoristas.map(m=>m.nome),gNomes=guias.map(g=>g.nome);
-  ['f-motorista','vf-motorista','e-motorista'].forEach(id=>initSelectValues(id,mNomes,''));
-  ['f-guia','vf-guia','e-guia'].forEach(id=>initSelectValues(id,gNomes,'','— nenhum —'));
-  const fm=e('fil-motorista');if(fm){fm.innerHTML='<option value="">Todos motoristas</option>';mNomes.forEach(n=>{const o=document.createElement('option');o.value=n;o.textContent=n;fm.appendChild(o);});}
+  const mN=motoristas.map(m=>m.nome),gN=guias.map(g=>g.nome);
+  ['f-motorista','vf-motorista','e-motorista'].forEach(id=>initSelectValues(id,mN,''));
+  ['f-guia','vf-guia','e-guia'].forEach(id=>initSelectValues(id,gN,'','nenhum'));
+  const fm=e('fil-motorista');if(fm){fm.innerHTML='<option value="">Todos motoristas</option>';mN.forEach(n=>{const o=document.createElement('option');o.value=n;o.textContent=n;fm.appendChild(o);});}
 }
 
-function addMotorista(){
-  const n=(e('new-mot').value||'').trim().toUpperCase(),c=e('new-mot-cor').value;
-  if(!n||motoristas.find(m=>m.nome===n))return;
-  motoristas.push({nome:n,cor:c});saveLocal();initAllSelects();renderEquipa();e('new-mot').value='';
-}
+function addMotorista(){const n=(e('new-mot').value||'').trim().toUpperCase(),c=e('new-mot-cor').value;if(!n||motoristas.find(m=>m.nome===n))return;motoristas.push({nome:n,cor:c});saveLocal();initAllSelects();renderEquipa();e('new-mot').value='';}
 function removeMotorista(n){if(!confirm('Remover '+n+'?'))return;motoristas=motoristas.filter(m=>m.nome!==n);saveLocal();initAllSelects();renderEquipa();}
-function addGuia(){
-  const n=(e('new-gui').value||'').trim().toUpperCase(),c=e('new-gui-cor').value;
-  if(!n||guias.find(g=>g.nome===n))return;
-  guias.push({nome:n,cor:c});saveLocal();initAllSelects();renderEquipa();e('new-gui').value='';
-}
+function addGuia(){const n=(e('new-gui').value||'').trim().toUpperCase(),c=e('new-gui-cor').value;if(!n||guias.find(g=>g.nome===n))return;guias.push({nome:n,cor:c});saveLocal();initAllSelects();renderEquipa();e('new-gui').value='';}
 function removeGuia(n){if(!confirm('Remover '+n+'?'))return;guias=guias.filter(g=>g.nome!==n);saveLocal();initAllSelects();renderEquipa();}
 
 function showPanel(id,btn){
@@ -1245,6 +1128,11 @@ function showPanel(id,btn){
   if(id==='despesas')renderDespesas();
   if(id==='vouchers')renderPontoReflexo();
 }
-</script>
+<\/script>
 </body>
-</html>
+</html>"""
+
+with open('/home/claude/index.html','w',encoding='utf-8') as f:
+    f.write(html)
+print("written", len(html), "chars")
+PYEOF
