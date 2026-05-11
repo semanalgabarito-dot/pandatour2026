@@ -5,49 +5,50 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PandaTour Gestão 2026</title>
 <style>
-    /* Estilos Premium (Mantendo a estética Blacklane/Luxury) */
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0a;color:#e8e8e8;font-size:13px}
-    :root{--gold:#C9A84C;--gold2:#E8C96A;--gold3:#F5E6B0;--dark:#0a0a0a;--dark2:#111;--dark3:#1a1a1a;--dark4:#242424;--bdr:#2a2a2a;--bdr2:#333;--red:#E24B4A;--green:#1D9E75;--text:#e8e8e8;--text2:#aaa}
+    :root{--gold:#C9A84C;--gold2:#E8C96A;--dark:#0a0a0a;--dark2:#111;--dark3:#1a1a1a;--dark4:#242424;--bdr:#2a2a2a;--bdr2:#333;--red:#E24B4A;--green:#1D9E75;--text:#e8e8e8;--text2:#aaa}
     
     .topbar{background:#111;border-bottom:1px solid var(--bdr);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:8px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.6)}
-    .logo-img{height:32px;width:auto}
-    .tabs{display:flex;gap:4px;background:#1a1a1a;border-radius:8px;padding:3px;border:1px solid var(--bdr)}
-    .tab{padding:6px 12px;border-radius:5px;font-size:11px;cursor:pointer;border:none;background:transparent;color:var(--text2);font-weight:500;transition:0.2s}
+    .logo-img{height:36px;width:auto}
+    .tabs{display:flex;gap:4px;background:#1a1a1a;border-radius:8px;padding:3px;border:1px solid var(--bdr);overflow-x:auto}
+    .tab{padding:6px 14px;border-radius:5px;font-size:11px;cursor:pointer;border:none;background:transparent;color:var(--text2);font-weight:500;white-space:nowrap;transition:0.2s}
     .tab.active{background:var(--gold);color:#000;font-weight:700}
     
-    .sync-indicator { font-size: 10px; color: var(--green); margin-right: 10px; display: flex; align-items: center; gap: 4px; }
+    .sync-indicator { font-size: 10px; color: var(--green); margin-right: 10px; display: flex; align-items: center; gap: 4px; font-weight:600}
     .main{padding:15px;max-width:1600px;margin:0 auto}
     .panel{display:none} .panel.active{display:block}
     
-    /* Tabelas e Cards */
     .tw{overflow-x:auto;border:1px solid var(--bdr2);border-radius:10px;background:var(--dark3);margin-top:15px}
     table{width:100%;border-collapse:collapse;font-size:11px}
-    th{background:var(--dark2);padding:10px;text-align:left;color:var(--gold);border-bottom:1px solid var(--bdr2);text-transform:uppercase;font-size:9px;letter-spacing:0.5px}
-    td{padding:8px 10px;border-bottom:1px solid var(--bdr);color:var(--text)}
+    th{background:var(--dark2);padding:12px 10px;text-align:left;color:var(--gold);border-bottom:1px solid var(--bdr2);text-transform:uppercase;font-size:9px;letter-spacing:0.5px}
+    td{padding:10px;border-bottom:1px solid var(--bdr);color:var(--text);vertical-align:middle}
+    tr:hover td{background:rgba(201,168,76,0.05)}
     
+    .badge{padding:3px 8px;border-radius:5px;font-size:9px;font-weight:700;text-transform:uppercase}
+    .b-pago{background:#0d2a1a;color:#2ECC71;border:1px solid #1a4d2e}
+    .b-falta{background:#2a0d0d;color:var(--red);border:1px solid #4d1a1a}
+
     .fw{background:var(--dark3);border:1px solid var(--bdr2);border-radius:10px;padding:15px;margin-bottom:15px}
     .fr{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:10px}
     .fg{display:flex;flex-direction:column;gap:4px}
-    .fg label{font-size:9px;color:var(--text2);text-transform:uppercase;font-weight:700}
-    .fg input, .fg select {padding:8px;border:1px solid var(--bdr2);border-radius:6px;background:var(--dark4);color:#fff;font-size:12px}
+    .fg label{font-size:9px;color:var(--gold);text-transform:uppercase;font-weight:700;letter-spacing:0.5px}
+    .fg input, .fg select {padding:8px;border:1px solid var(--bdr2);border-radius:6px;background:var(--dark4);color:#fff;font-size:12px;font-family:inherit}
     
     .btn{padding:8px 15px;border-radius:6px;font-size:11px;cursor:pointer;border:1px solid var(--bdr2);background:var(--dark4);color:#fff;font-weight:600;transition:0.2s}
     .btn.primary{background:var(--gold);color:#000;border:none}
-    .btn:hover{filter: brightness(1.2)}
     
-    /* Login */
-    .ls{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh}
-    .lc{background:var(--dark3);padding:40px;border-radius:20px;text-align:center;border:1px solid var(--bdr2);box-shadow:0 10px 40px rgba(0,0,0,0.5)}
+    .ls{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;background:#000}
+    .lc{background:var(--dark3);padding:40px;border-radius:24px;text-align:center;border:1px solid var(--bdr2);width:90%;max-width:380px}
 </style>
 </head>
 <body>
 
 <div id="login-view" class="ls">
     <div class="lc">
-        <img src="https://semanalgabarito-dot.github.io/pandatour2026/LOGOSEMFUNDO.png" style="width:180px;margin-bottom:20px">
-        <h1 style="font-size:14px;letter-spacing:2px;color:var(--text2);margin-bottom:30px">GESTÃO PANDATOUR 2026</h1>
-        <button class="btn primary" style="width:100%;padding:15px" onclick="initApp()">ENTRAR NO SISTEMA</button>
+        <img src="https://semanalgabarito-dot.github.io/pandatour2026/LOGOSEMFUNDO.png" style="width:200px;margin-bottom:20px">
+        <h1 style="font-size:12px;letter-spacing:3px;color:var(--text2);margin-bottom:30px;font-weight:400">PANDATOUR GESTÃO 2026</h1>
+        <button class="btn primary" style="width:100%;padding:15px;letter-spacing:1px" onclick="initApp()">ENTRAR NO SISTEMA</button>
     </div>
 </div>
 
@@ -57,67 +58,44 @@
         <div class="tabs">
             <button class="tab active" onclick="showPanel('servicos',this)">📋 Serviços</button>
             <button class="tab" onclick="showPanel('anual',this)">📊 Anual 2026</button>
+            <button class="tab" onclick="showPanel('financeiro',this)">💰 Finanças</button>
             <button class="tab" onclick="showPanel('despesas',this)">💸 Despesas</button>
         </div>
         <div style="display:flex;align-items:center">
-            <span id="sync-status" class="sync-indicator">● Online</span>
-            <button class="btn" onclick="fetchData()">↻ Refresh</button>
+            <span id="sync-status" class="sync-indicator">● Offline</span>
+            <button class="btn" style="padding:6px 10px" onclick="fetchData()">↻</button>
         </div>
     </div>
 
     <div class="main">
         <div id="panel-servicos" class="panel active">
             <div class="fw">
-                <h3 style="color:var(--gold);margin-bottom:10px;font-size:11px">ADICIONAR SERVIÇO 2026</h3>
                 <div class="fr">
                     <div class="fg"><label>Data</label><input type="date" id="f-data"></div>
                     <div class="fg"><label>Hora</label><input type="time" id="f-hora"></div>
-                    <div class="fg"><label>Cliente/Agência</label><input type="text" id="f-cliente" placeholder="Ex: Apextion"></div>
-                    <div class="fg"><label>Motorista</label>
-                        <select id="f-motorista">
-                            <option value="Mauro">Mauro</option>
-                            <option value="Igor">Igor</option>
-                            <option value="Idalina">Idalina</option>
-                        </select>
-                    </div>
+                    <div class="fg"><label>Origem</label><select id="f-origem"><option>Apextion</option><option>Carla</option><option>Ponto Reflexo</option><option>Site</option><option>WhatsApp</option></select></div>
+                    <div class="fg"><label>Motorista</label><select id="f-motorista"><option>Mauro</option><option>Igor</option><option>Idalina</option></select></div>
                 </div>
-                <button class="btn primary" onclick="alert('Funcionalidade de escrita requer permissão de escrita no script.')">Gravar no Sheets</button>
+                <button class="btn primary" onclick="fetchData()">Sincronizar Dados</button>
             </div>
             
-            <div class="tw">
-                <table id="table-servicos">
-                    <thead>
-                        <tr>
-                            <th>Data</th><th>Hora</th><th>Origem</th><th>Cliente</th><th>Trajeto</th><th>Voo</th><th>Motorista</th><th>Valor €</th><th>Estado</th>
-                        </tr>
-                    </thead>
-                    <tbody id="body-servicos"></tbody>
-                </table>
-            </div>
-        </div>
-
-        <div id="panel-anual" class="panel">
             <div class="tw">
                 <table>
                     <thead>
                         <tr>
-                            <th>Mês</th><th>PandaTour</th><th>Parceiros</th><th>Carla €</th><th>Carla VCH</th><th>Carla %</th><th>Líquido</th><th>Uber</th><th>Bolt</th>
+                            <th>Data</th><th>Hora</th><th>Tipo</th><th>Origem</th><th>Cliente</th><th>Trajeto</th><th>Motorista</th><th>Valor €</th><th>Estado</th>
                         </tr>
                     </thead>
-                    <tbody id="body-anual"></tbody>
+                    <tbody id="body-servicos">
+                        <tr><td colspan="9" style="text-align:center;padding:40px;color:#666">A carregar serviços de 2026...</td></tr>
+                    </tbody>
                 </table>
             </div>
         </div>
 
-        <div id="panel-despesas" class="panel">
-            <div class="fr" style="margin-top:20px">
-                <div class="fw">
-                    <h3 style="color:var(--gold);margin-bottom:15px">CUSTOS FIXOS/VARIÁVEIS</h3>
-                    <div id="list-despesas">
-                        </div>
-                </div>
-            </div>
-        </div>
+        <div id="panel-anual" class="panel"><div class="tw"><table><thead><tr><th>Mês</th><th>PandaTour</th><th>Parceiros</th><th>Líquido</th><th>Uber</th><th>Bolt</th></tr></thead><tbody id="body-anual"></tbody></table></div></div>
+        <div id="panel-financeiro" class="panel"><div class="fw"><h3>Resumo Financeiro</h3><p style="color:#666; margin-top:10px">Dados sincronizados do Sheets...</p></div></div>
+        <div id="panel-despesas" class="panel"><div class="fw"><h3>Custos Tesla / Operação</h3><div id="list-despesas"></div></div></div>
     </div>
 </div>
 
@@ -128,8 +106,6 @@ function initApp() {
     document.getElementById('login-view').style.display = 'none';
     document.getElementById('app-view').style.display = 'block';
     fetchData();
-    // Auto-refresh a cada 5 minutos
-    setInterval(fetchData, 300000);
 }
 
 function showPanel(id, btn) {
@@ -142,7 +118,7 @@ function showPanel(id, btn) {
 async function fetchData() {
     const status = document.getElementById('sync-status');
     status.style.color = '#C9A84C';
-    status.innerText = '● A atualizar...';
+    status.innerText = '● Atualizando...';
 
     try {
         const response = await fetch(SCRIPT_URL);
@@ -150,11 +126,10 @@ async function fetchData() {
         
         renderServicos(data.servicos);
         renderAnual(data.anual);
-        renderDespesas(data.despesas);
-
+        
         status.style.color = '#1D9E75';
         const now = new Date();
-        status.innerText = '● Sincronizado ' + now.getHours() + ':' + String(now.getMinutes()).padStart(2, '0');
+        status.innerText = '● Sync ' + now.getHours() + ':' + String(now.getMinutes()).padStart(2, '0');
     } catch (e) {
         status.style.color = '#E24B4A';
         status.innerText = '● Erro Sinc.';
@@ -163,21 +138,35 @@ async function fetchData() {
 }
 
 function renderServicos(list) {
-    if(!list) return;
+    if(!list || !Array.isArray(list)) return;
     const body = document.getElementById('body-servicos');
-    body.innerHTML = list.map(s => `
+    
+    // ORDENAÇÃO POR DATA E HORA
+    const sortedList = list.sort((a, b) => {
+        const dateA = new Date((a.data || '2026-01-01') + 'T' + (a.hora || '00:00'));
+        const dateB = new Date((b.data || '2026-01-01') + 'T' + (b.hora || '00:00'));
+        return dateA - dateB;
+    });
+
+    body.innerHTML = sortedList.map(s => {
+        const isPago = s.pago && (s.pago.toLowerCase() === 'sim' || s.pago.toLowerCase() === 'pago');
+        return `
         <tr>
-            <td>${s.data || ''}</td>
-            <td>${s.hora || ''}</td>
-            <td>${s.origem || ''}</td>
+            <td style="font-weight:600">${s.data || ''}</td>
+            <td style="color:var(--gold)">${s.hora || ''}</td>
+            <td>${s.tipo || ''}</td>
+            <td><span style="font-size:10px; opacity:0.7">${s.origem || ''}</span></td>
             <td>${s.cliente || ''}</td>
-            <td>${s.trajeto || ''}</td>
-            <td>${s.voo || ''}</td>
-            <td>${s.motorista || ''}</td>
-            <td style="font-weight:bold">${s.valor || '0.00'}€</td>
-            <td><span style="color:${s.pago === 'Sim' ? '#1D9E75' : '#E24B4A'}">${s.pago || 'Falta'}</span></td>
+            <td style="font-size:10px">${s.trajeto || ''}</td>
+            <td><span style="color:var(--text)">${s.motorista || ''}</span></td>
+            <td style="font-weight:700">${s.valor || '0.00'}€</td>
+            <td>
+                <span class="badge ${isPago ? 'b-pago' : 'b-falta'}">
+                    ${isPago ? 'PAGO' : 'FALTA'}
+                </span>
+            </td>
         </tr>
-    `).join('');
+    `}).join('');
 }
 
 function renderAnual(list) {
@@ -188,33 +177,10 @@ function renderAnual(list) {
             <td style="color:var(--gold); font-weight:bold">${m.mes}</td>
             <td>${m.panda || 0}€</td>
             <td>${m.parceiros || 0}€</td>
-            <td>${m.carla_euro || 0}€</td>
-            <td>${m.carla_vch || 0}€</td>
-            <td>${m.carla_pct || 0}%</td>
-            <td style="background:rgba(29,158,117,0.1)">${m.liquido || 0}€</td>
+            <td style="color:var(--green)">${m.liquido || 0}€</td>
             <td>${m.uber || 0}€</td>
             <td>${m.bolt || 0}€</td>
         </tr>
-    `).join('');
-}
-
-function renderDespesas(d) {
-    const container = document.getElementById('list-despesas');
-    if(!d) return;
-    // Mapeamento de campos do seu Excel
-    const campos = [
-        {l: 'Tesla Carro', v: d.tesla_carro},
-        {l: 'Seguro', v: d.seguro},
-        {l: 'Via Verde', v: d.via_verde},
-        {l: 'Powerdot/Tesla', v: d.energia},
-        {l: 'Contabilidade', v: d.contabilidade}
-    ];
-    
-    container.innerHTML = campos.map(c => `
-        <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid #222">
-            <span style="color:#aaa">${c.l}</span>
-            <span style="font-weight:bold">${c.v || 0}€</span>
-        </div>
     `).join('');
 }
 </script>
